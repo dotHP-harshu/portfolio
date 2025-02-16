@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!-- Created by Harsh Prajapati -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-[var(--bg-color)] text-white font-[main] overflow-x-hidden">
+    <div class="elements absolute top-0 left-4">
+        <div class="flex flex-col gap-2 items-center">
+            <svg viewBox="0 0 16 250" class="h-[250px]">
+                <path style="stroke: white; stroke-width: 2; fill: none; stroke-dasharray: 250;" d="M8 0 V2500" stroke-linecap="round" />
+            </svg>
+            <a href="#"><img src="assets/images/github-icon.svg" alt="github" class="w-10 h-10"></a>
+            <a href="#"><img src="assets/images/instagram-icon.svg" alt="github" class="w-12 h-12 rounded-full"></a>
+        </div>
+    </div>
+    <!-- --------- Main starts here --------------- -->
+    <main class="block w-[80%] mx-auto p-4 ">
+
+
+
+        <!-- -------- Navbar starts here ------  -->
+        <nav class="flex justify-between items-center">
+            <div class="logo">
+                <p class="text-base font-extrabold ">DotHP</p>
+            </div>
+            <ul class="menu flex gap-6 items-center ">
+                <li class="menu-links ">
+                    <a href="#" class="no-underline text-white text-base hover:text-[white] transition-colors"><span
+                            class="highlight-text">#</span>home</a>
+                </li>
+                <li class="menu-links ">
+                    <a href="#"
+                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
+                            class="highlight-text">#</span>works</a>
+                </li>
+                <li class="menu-links ">
+                    <a href="#"
+                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
+                            class="highlight-text">#</span>about-me</a>
+                </li>
+                <li class="menu-links ">
+                    <a href="#"
+                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
+                            class="highlight-text">#</span>contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- -------- Navbar starts here ------  -->
+
+        <!-- -------- Hero starts here ------  -->
+        <section class="hero min-h-[90vh] flex w-full p-6">
+            <!-- left-hero  -->
+            <div class="hero-left w-1/2  flex flex-col justify-center items-start gap-10">
+                <h1 class="hero-heading text-2xl font-extrabold">Hi, I’m <span class="highlight-text">Harsh
+                        Prajapati</span><br>A Passionate Frontend Developer!</h1>
+                <p class="hero-para text-[var(--light-text)] text-base">Passionate about crafting elegant web solutions
+                    with clean and efficient code. </p>
+                <a href="#" class="btn">Download
+                    CV</a>
+            </div>
+            <!-- left-hero  -->
+            <!-- right-hero  -->
+            <div class="right-hero w-1/2 flex justify-center items-center ">
+                <div class="right-hero-img w-full flex justify-center items-center flex-col">
+                    <img src="assets/images/right-hero-img.png" alt="right-hero-img" class="w-full h-auto">
+                    <div class="w-[84%] flex gap-2 items-center py-1 px-2 border-[1px] border-white  ">
+                        <span class="inline-block w-3 h-3 bg-[var(--main-color)]"></span>
+                        <p class=" right-hero-para text-white text-sm "></span>currently working on <span
+                                class="font-bold">Portfolio</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- right-hero  -->
+        </section>
+        <!-- -------- Hero ends here ------  -->
+
+        <!-- -------- Quote starts here ------  -->
+        <section class="relative w-full mt-16 flex justify-center items-center">
+            <!-- rectangle element  -->
+            <div class="rect-elements absolute top-0 left-full">
+                <div class="flex flex-col gap-2 items-center">
+                    <svg viewBox="0 0 300 200" class=" h-52 w-72">
+                        <path style="stroke: white; stroke-width: 1; fill: none; stroke-dasharray: 600;" d="M50 150 V50 H250 V150 H50" stroke-linecap="round" />
+                    </svg>
+                </div>
+            </div>
+            <!-- rectangle element  -->
+            <div class="w-fit flex flex-col items-end">
+                <div class="quote w-fit px-8 py-6 border-2 border-white relative">
+                    <span class="absolute top-0 let-4 translate-y-[-50%] text-5xl px-2 bg-[var(--bg-color)]">"</span>
+                    <span
+                        class="absolute bottom-0 right-4 translate-y-[50%] text-5xl px-2 bg-[var(--bg-color)]">"</span>
+                    <p class="text-xl font-semibold">Something is better than nothing.</p>
+                </div>
+                <div class="quote-author w-fit p-4 border-2 border-t-0 border-white">
+                    <p class="text-base">- Er. Who</p>
+                </div>
+            </div>
+        </section>
+        <!-- -------- Quote ends here ------  -->
+
+        <!-- -------- Projects starts here ------  -->
+        <section class="project-container py-10 mt-16">
+            <div class="section-head flex items-center justify-between">
+                <div class="flex items-center">
+                    <span class="highlight-text text-xl font-bold">#</span>
+                    <h1 class="text-xl font-semibold">projects</h1>
+                    <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)]"></span>
+                </div>
+                <div>
+                    <a href="#" class="text-white text-lg">view all~~></a>
+                </div>
+            </div>
+            <div class="projects flex flex-wrap justify-evenly items-center py-6 ">
+                <!-- poject 1 -->
+                <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                    <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                    </div>
+                    <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                        <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                        <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                    </div>
+                    <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                        <h1 class="project-title text-base text-white ">project name</h1>
+                        <p class="project-para text-sm text-[var(--light-text)]">Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit.</p>
+                    </div>
+                    <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                        <a href="#" class="px-4 btn">Live&gt;</a>
+                    </div>
+                </div>
+                <!-- poject 1 -->
+                <!-- poject 2 -->
+                <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                    <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                    </div>
+                    <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                        <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                        <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                    </div>
+                    <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                        <h1 class="project-title text-base text-white ">project name</h1>
+                        <p class="project-para text-sm text-[var(--light-text)]">Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit.</p>
+                    </div>
+                    <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                        <a href="#" class="px-4 btn">Live&gt;</a>
+                    </div>
+                </div>
+                <!-- poject 2 -->
+                <!-- poject 3  -->
+                <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                    <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                    </div>
+                    <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                        <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                        <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                    </div>
+                    <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                        <h1 class="project-title text-base text-white ">project name</h1>
+                        <p class="project-para text-sm text-[var(--light-text)]">Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit.</p>
+                    </div>
+                    <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                        <a href="#" class="px-4 btn">Live&gt;</a>
+                    </div>
+                </div>
+                <!-- poject 3 -->
+            </div>
+        </section>
+        <!-- -------- Projects ends here ------  -->
+
+        <!-- -------- Skills starts here ------  -->
+        <section class="skill-container mt-16">
+            <div class="section-head flex items-center">
+                <span class="highlight-text text-xl font-bold">#</span>
+                <h1 class="text-xl font-semibold">skills</h1>
+                <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)]"></span>
+            </div>
+            <div class="skil-left h-auto py-6 flex items-start">
+                <div class="skill-left w-[40%] h-full">
+                    <img src="assets/images/skill-img.svg" alt="skill-img" class="w-full h-auto">
+                </div>
+                <div class="skill-right flex gap-4 w-[60%]">
+                    <!-- skill-column  -->
+                    <div class="skill-column w-1/3">
+                        <!-- skills  -->
+                        <div class="language border-[1px] border-[var(--light-text)]">
+                            <h1
+                                class="skill-title border-b-[1px] border-[var(--light-text)] px-4 py-2 text-sm text-white font-semibold">
+                                Language</h1>
+                            <div class="skill-names px-4 py-2 ">
+                                <span class="text-sm text-[var(--light-text)]">javascript</span>
+                            </div>
+                        </div>
+                        <!-- skills  -->
+                    </div>
+                    <!-- skill-column  -->
+                    <!-- skill-column  -->
+                    <div class="skill-column w-1/3 flex flex-col gap-4">
+                        <!-- skills  -->
+                        <div class="database border-[1px] border-[var(--light-text)]">
+                            <h1
+                                class="skill-title border-b-[1px] border-[var(--light-text)] px-4 py-2 text-sm text-white font-semibold">
+                                Database</h1>
+                            <div class="skill-names px-4 py-2 ">
+                                <span class="text-sm text-[var(--light-text)]">mongodb</span>
+                            </div>
+                        </div>
+                        <!-- skills  -->
+                        <!-- skills  -->
+                        <div class="other border-[1px] border-[var(--light-text)]">
+                            <h1
+                                class="skill-title border-b-[1px] border-[var(--light-text)] px-4 py-2 text-sm text-white font-semibold">
+                                Others</h1>
+                            <div class="skill-names px-4 py-2 ">
+                                <span class="text-sm text-[var(--light-text)]">HTML</span>
+                                <span class="text-sm text-[var(--light-text)]">CSS</span>
+                                <span class="text-sm text-[var(--light-text)]">EJS</span>
+                            </div>
+                        </div>
+                        <!-- skills  -->
+                    </div>
+                    <!-- skill-column  -->
+                    <!-- skill-column  -->
+                    <div class="skill-column w-1/3 flex flex-col gap-4">
+                        <!-- skills  -->
+                        <div class="tools border-[1px] border-[var(--light-text)]">
+                            <h1
+                                class="skill-title border-b-[1px] border-[var(--light-text)] px-4 py-2 text-sm text-white font-semibold">
+                                Tools</h1>
+                            <div class="skill-names px-4 py-2 ">
+                                <span class="text-sm text-[var(--light-text)]">GIT</span>
+                                <span class="text-sm text-[var(--light-text)]">github</span>
+                                <span class="text-sm text-[var(--light-text)]">figma</span>
+                                <span class="text-sm text-[var(--light-text)]">VS code</span>
+                            </div>
+                        </div>
+                        <!-- skills  -->
+                        <!-- skills  -->
+                        <div class="framworks border-[1px] border-[var(--light-text)]">
+                            <h1
+                                class="skill-title border-b-[1px] border-[var(--light-text)] px-4 py-2 text-sm text-white font-semibold">
+                                Frameworks</h1>
+                            <div class="skill-names px-4 py-2 ">
+                                <span class="text-sm text-[var(--light-text)]">Express.js</span>
+                                <span class="text-sm text-[var(--light-text)]">tailwind.css</span>
+                            </div>
+                        </div>
+                        <!-- skills  -->
+                    </div>
+                    <!-- skill-column  -->
+                </div>
+            </div>
+        </section>
+        <!-- -------- Skills starts here ------  -->
+
+        <!-- -------- About starts here ------  -->
+        <section class="about mt-16 relative">
+             <!-- rectangle element  -->
+             <div class="rect-elements absolute top-0 right-full">
+                <div class="flex flex-col gap-2 items-center">
+                    <svg viewBox="0 0 300 200" class=" h-52 w-72">
+                        <path style="stroke: white; stroke-width: 1; fill: none; stroke-dasharray: 600;" d="M50 150 V50 H250 V150 H50" stroke-linecap="round" />
+                    </svg>
+                </div>
+            </div>
+            <!-- rectangle element  -->
+            <div class="section-head flex items-center">
+                <span class="highlight-text text-xl font-bold">#</span>
+                <h1 class="text-xl font-semibold">about-me</h1>
+                <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)]"></span>
+            </div>
+            <div class="about flex w-full">
+                <div class="about-left w-1/2 h-ful flex flex-col gap-6 justify-center items-start ">
+                    <p class="about-para text-sm text-[var(--light-text)]">Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Dignissimos sapiente laboriosam voluptas mollitia ad consequatur, incidunt,
+                        necessitatibus ab eos consectetur, perspiciatis cum quos rem. In, facere. Sit perferendis
+                        repellat ipsa.</p>
+                    <a href="#" class="btn">Read More&gt;</a>
+                </div>
+                <div class="right w-1/2 flex justify-center items-center">
+                    <img src="assets/images/about-img.png" alt="about-img" class="w-3/4 h-auto">
+                </div>
+            </div>
+        </section>
+        <!-- -------- About starts here ------  -->
+
+        <!-- -------- Contact starts here ------  -->
+        <section class="contact-container mt-16">
+            <div class="section-head flex items-center">
+                <span class="highlight-text text-xl font-bold">#</span>
+                <h1 class="text-xl font-semibold">contact-me</h1>
+                <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)]"></span>
+            </div>
+            <div class="contact flex items-center min-h-80">
+                <div class="contact-left w-1/2 flex flex-col justify-center items-start">
+                    <p class="contact-para text-sm text-[var(--light-text)]">Lorem ipsum dolor, sit amet consectetur
+                        adipisicing elit. Ratione accusamus consectetur magni minima? Ab, quaerat.</p>
+                </div>
+                <div class="contact-right w-1/2 flex flex-col justify-center items-center">
+                    <div class="contact-detail min-w-60 border-[1px] border-[var(--light-text)] px-4 py-2">
+                        <h1 class="font-semibold text-sm mb-2">Message me here!</h1>
+                        <a href="#" class="contact flex items-center gap-1">
+                            <img src="assets/images/email-icon.svg" alt="email-icon" class="w-6 h-6">
+                            <p class="text-sm text-[var(--light-text)]">harshprajapati3636@gmail.com</p>
+                        </a>
+                        <a href="#" class="contact flex items-center gap-1">
+                            <img src="assets/images/instagram-icon.svg" alt="email-icon" class="w-8 h-8">
+                            <p class="text-sm text-[var(--light-text)]">btw_harsh_</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- -------- Contact ends here ------  -->
+
+    </main>
+    <!-- --------- Main ends here --------------- -->
+
+    <hr class="w-full">
+
+    <!-- --------- Footer starts here --------------- -->
+    <footer class="w-[80%] flex justify-around items-center py-20">
+        <div class="footer-left ">
+            <div class="footer-logo flex gap-6">
+                <p class="text-base font-extrabold ">DotHP</p>
+                <img src="assets/images/white-sign.svg" alt="white-sign" class="h-8 w-auto">
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="footer-links">
+                <a href="#" class="w-6 h-6"><img src="assets/images/github-icon.svg" alt="github-icon"></a>
+            </div>
+        </div>
+    </footer>
+    <!-- --------- Footer starts here --------------- -->
+</body>
+
+</html>
+
+
+<!-- push all project in main branch and public folder in page branch  -->

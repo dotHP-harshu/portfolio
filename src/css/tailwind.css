@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.highlight-text{
+    @apply  text-[var(--main-color)] font-extrabold;
+}
+
+.btn{
+    @apply inline-block px-6 py-2 font-light text-sm border-[1px] border-[var(--light-tex)];
+}

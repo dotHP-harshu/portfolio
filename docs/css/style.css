@@ -1,0 +1,11 @@
+@font-face {
+    font-family: main;
+    src: url("../assets/fonts/FiraCode-Regular.ttf");
+}
+
+:root{
+    --main-color:#C778DD;
+    --light-text:#ABB2BF;
+    --bg-color:#282C33;
+}
+
