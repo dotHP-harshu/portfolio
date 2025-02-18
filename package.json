@@ -4,7 +4,7 @@
   "main": "./public/index.html",
   "scripts": {
     "start": "vite",
-    "build": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/output.css --watch",
+    "build": "npx tailwindcss -i ./src/css/tailwind.css -o ./docs/css/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

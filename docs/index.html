@@ -11,6 +11,7 @@
 </head>
 
 <body class="bg-[var(--bg-color)] text-white font-[main] overflow-x-hidden">
+    <!-- ------------- link-elements starts here----------- -->
     <div class="elements absolute top-0 left-4">
         <div class="flex flex-col gap-2 items-center">
             <svg viewBox="0 0 16 250" class="h-[250px]">
@@ -20,6 +21,8 @@
             <a href="#"><img src="assets/images/instagram-icon.svg" alt="github" class="w-12 h-12 rounded-full"></a>
         </div>
     </div>
+    <!-- ------------- link-elements ends here----------- -->
+
     <!-- --------- Main starts here --------------- -->
     <main class="block w-[80%] mx-auto p-4 ">
 
@@ -32,21 +35,21 @@
             </div>
             <ul class="menu flex gap-6 items-center ">
                 <li class="menu-links ">
-                    <a href="#" class="no-underline text-white text-base hover:text-[white] transition-colors"><span
+                    <a href="index.html" class="no-underline text-white text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>home</a>
                 </li>
                 <li class="menu-links ">
-                    <a href="#"
+                    <a href="projects.html"
                         class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>works</a>
                 </li>
                 <li class="menu-links ">
-                    <a href="#"
+                    <a href="about.html"
                         class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>about-me</a>
                 </li>
                 <li class="menu-links ">
-                    <a href="#"
+                    <a href="contact.html"
                         class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>contact</a>
                 </li>
@@ -115,7 +118,7 @@
                     <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)]"></span>
                 </div>
                 <div>
-                    <a href="#" class="text-white text-lg">view all~~></a>
+                    <a href="projects.html" class="text-white text-lg">view all~~></a>
                 </div>
             </div>
             <div class="projects flex flex-wrap justify-evenly items-center py-6 ">
@@ -280,11 +283,9 @@
             </div>
             <div class="about flex w-full">
                 <div class="about-left w-1/2 h-ful flex flex-col gap-6 justify-center items-start ">
-                    <p class="about-para text-sm text-[var(--light-text)]">Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Dignissimos sapiente laboriosam voluptas mollitia ad consequatur, incidunt,
-                        necessitatibus ab eos consectetur, perspiciatis cum quos rem. In, facere. Sit perferendis
-                        repellat ipsa.</p>
-                    <a href="#" class="btn">Read More&gt;</a>
+                    <p class="about-para text-lg text-[var(--light-text)]"> hello! I’m Harsh Prajapati.</p>
+                    <p class="about-para text-lg text-[var(--light-text)]">I’m a self-motivated web developer based in Uttar Pradesh, India. I loves transforming designs into clean, functional, and engaging web experiences. I am passionate about building responsive, and user-friendly websites.</p>
+                    <a href="about.html" class="btn">Read More&gt;</a>
                 </div>
                 <div class="right w-1/2 flex justify-center items-center">
                     <img src="assets/images/about-img.png" alt="about-img" class="w-3/4 h-auto">
@@ -328,17 +329,26 @@
     <hr class="w-full">
 
     <!-- --------- Footer starts here --------------- -->
-    <footer class="w-[80%] flex justify-around items-center py-20">
-        <div class="footer-left ">
-            <div class="footer-logo flex gap-6">
-                <p class="text-base font-extrabold ">DotHP</p>
-                <img src="assets/images/white-sign.svg" alt="white-sign" class="h-8 w-auto">
+    <footer class="w-[80%] block mx-auto">
+        <div class="footer flex justify-around items-center py-20">
+
+            <div class="footer-left ">
+                <div class="footer-logo flex gap-6">
+                    <p class="text-base font-extrabold ">DotHP</p>
+                    <img src="assets/images/white-sign.svg" alt="white-sign" class="h-8 w-auto">
+                </div>
+                <div>
+                    <p class="text-base">Frontend Developer</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="#" class="w-6 h-6"><img src="assets/images/github-icon.svg" alt="github-icon"></a>
+                </div>
             </div>
         </div>
-        <div class="footer-right">
-            <div class="footer-links">
-                <a href="#" class="w-6 h-6"><img src="assets/images/github-icon.svg" alt="github-icon"></a>
-            </div>
+        <div class="copyright w-full py-4">
+            <p class=" w-fit mx-auto text-sm text-[var(--light-text)]">&copy; 2025 | Developed by Harhs Prajapati</p>
         </div>
     </footer>
     <!-- --------- Footer starts here --------------- -->

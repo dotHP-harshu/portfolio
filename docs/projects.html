@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<!-- Created by Harsh Prajapati -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-[var(--bg-color)] text-white font-[main] overflow-x-hidden">
+    <!-- ------------- link-elements starts here----------- -->
+    <div class="elements absolute top-0 left-4">
+        <div class="flex flex-col gap-2 items-center">
+            <svg viewBox="0 0 16 250" class="h-[250px]">
+                <path style="stroke: white; stroke-width: 2; fill: none; stroke-dasharray: 250;" d="M8 0 V2500"
+                    stroke-linecap="round" />
+            </svg>
+            <a href="#"><img src="assets/images/github-icon.svg" alt="github" class="w-10 h-10"></a>
+            <a href="#"><img src="assets/images/instagram-icon.svg" alt="github" class="w-12 h-12 rounded-full"></a>
+        </div>
+    </div>
+    <!-- ------------- link-elements ends here----------- -->
+
+    <!-- --------- Main starts here --------------- -->
+    <main class="block w-[80%] mx-auto p-4 ">
+
+
+
+        <!-- -------- Navbar starts here ------  -->
+        <nav class="flex justify-between items-center">
+            <div class="logo">
+                <p class="text-base font-extrabold ">DotHP</p>
+            </div>
+            <ul class="menu flex gap-6 items-center ">
+                <li class="menu-links ">
+                    <a href="index.html"
+                        class="no-underline text-[var(--light-text)]  text-base hover:text-[white] transition-colors"><span
+                            class="highlight-text">#</span>home</a>
+                </li>
+                <li class="menu-links ">
+                    <a href="projects.html"
+                        class="no-underline text-white text-base hover:text-[white] transition-colors"><span
+                            class="highlight-text">#</span>works</a>
+                </li>
+                <li class="menu-links ">
+                    <a href="about.html"
+                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
+                            class="highlight-text">#</span>about-me</a>
+                </li>
+                <li class="menu-links ">
+                    <a href="contact.html"
+                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
+                            class="highlight-text">#</span>contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- -------- Navbar starts here ------  -->
+
+        <!-- -------- path section start here ------------- -->
+        <section class="path mt-10">
+            <p class="text-5xl"><span class="highlight-text">/</span>projects</p>
+        </section>
+        <!-- -------- path section endt here ------------- -->
+
+        <!-- -------- Projects starts here ------  -->
+        <section class="project-container py-10 mt-16">
+            <!-- ----------- Project section starts here------------- -->
+            <div class="project-sections">
+                <div class="projects flex flex-wrap items-center gap-10 py-6 justify-center">
+                    <!-- poject 1 -->
+                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                        <div class="project-img w-full h-44 overflow-hidden ">
+                            <img src="assets/images/projects/resume_builder.png" alt="resume_builder"
+                                class="h-full w-auto object-cover object-center">
+                        </div>
+                        <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                            <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
+                        </div>
+                        <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                            <h1 class="project-title text-base text-white ">Resume Builder</h1>
+                            <p class="project-para text-sm text-[var(--light-text)]"> simple and customizable Resume
+                                Builder web application that allows users to create their resumes easily.</p>
+                        </div>
+                        <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                            <a target="_blank" href="https://dothp-harshu.github.io/resume_builder.io/"
+                                class="px-4 btn">Live&gt;</a>
+                            <a target="_blank" href="https://github.com/dotHP-harshu/resume_builder.io"
+                                class="px-4 btn">Code&gt;</a>
+                        </div>
+                    </div>
+                    <!-- poject 1 -->
+                    <!-- poject 2 -->
+                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                        <div class="project-img w-full h-44 overflow-hidden ">
+                            <img src="assets/images/projects/shivaji.png" alt="shivaji"
+                                class="h-full w-auto object-cover object-center">
+                        </div>
+                        <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                            <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">gsap</span>
+                        </div>
+                        <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                            <h1 class="project-title text-base text-white ">Tribute Page</h1>
+                            <p class="project-para text-sm text-[var(--light-text)]">This is a tribute page dedicated to
+                                the legendary warrior Chhatrapati Shivaji Maharaj, founder of the Maratha Empire.</p>
+                        </div>
+                        <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                            <a target="_blank" href="https://dothp-harshu.github.io/chhatrapati_shivaji_maharaj/"
+                                class="px-4 btn">Live&gt;</a>
+                            <a target="_blank" href="https://github.com/dotHP-harshu/chhatrapati_shivaji_maharaj"
+                                class="px-4 btn">Code&gt;</a>
+                        </div>
+                    </div>
+                    <!-- poject 2 -->
+                </div>
+            </div>
+            <!-- ----------- Project section ends here------------- -->
+
+            <!-- ----------- Project section starts here------------- -->
+            <div class="project-sections web-projects mt-10">
+                <div class="section-head flex items-center justify-between">
+                    <div class="flex items-center">
+                        <span class="highlight-text text-xl font-bold">#</span>
+                        <h1 class="text-xl font-semibold">Web projects</h1>
+                        <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)]"></span>
+                    </div>
+                    <div>
+                        <a target="_blank" href="https://dothp-harshu.github.io/Web_projects.io/" class="text-white text-lg">view all~~></a>
+                    </div>
+                </div>
+                <div class="projects flex flex-wrap gap-10 justify-center items-center py-10 ">
+                    <!-- poject 1 -->
+                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                        <div class="project-img w-full h-44 overflow-hidden ">
+                            <img src="assets/images/projects/netflix.png" alt="netflix"
+                                class="h-full w-auto object-center object-cover">
+                        </div>
+                        <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                            <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
+                        </div>
+                        <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                            <h1 class="project-title text-base text-white ">Netflix</h1>
+                            <p class="project-para text-sm text-[var(--light-text)]">A clone of the popular Netflix
+                                platform using HTML, CSS, and JavaScript.</p>
+                        </div>
+                        <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                            <a href="https://dothp.bsite.net/web_projects/netflix/" target="_blank" class="px-4 btn">Live&gt;</a>
+                            <a href="https://dothp.bsite.net/netflix/" target="_blank" class="px-4 btn">Code&gt;</a>
+                        </div>
+                    </div>
+                    <!-- poject 1 -->
+                    <!-- poject 2 -->
+                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                            <img src="assets/images/web-projects/bookmark.png" alt="bookmark"
+                                class="h-full w-auto object-center object-cover">
+                        </div>
+                        <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                            <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
+                        </div>
+                        <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                            <h1 class="project-title text-base text-white ">Bookmard</h1>
+                            <p class="project-para text-sm text-[var(--light-text)]">A simple and clean landing page for
+                                bookmark management software.</p>
+                        </div>
+                        <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                            <a target="_blank" href="https://dothp.bsite.net/web_projects/bookmark/"
+                                class="px-4 btn">Live&gt;</a>
+                            <a target="_blank" href="https://github.com/dotHP-harshu/Web_projects/tree/main/bookmark"
+                                class="px-4 btn">Code&gt;</a>
+                        </div>
+                    </div>
+                    <!-- poject 2 -->
+                    <!-- poject 3  -->
+                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                            <img src="assets/images/web-projects/loopstudio.png" alt="loopstudio"
+                                class="h-full w-auto object-center object-cover">
+
+                        </div>
+                        <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                            <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
+                        </div>
+                        <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                            <h1 class="project-title text-base text-white ">Loop studio</h1>
+                            <p class="project-para text-sm text-[var(--light-text)]">A sleek and minimalistic studio
+                                portfolio website.</p>
+                        </div>
+                        <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                            <a target="_blank" href="https://github.com/dotHP-harshu/Web_projects/tree/main/loopstudio"
+                                class="px-4 btn">Live&gt;</a>
+                            <a target="_blank" href="https://dothp.bsite.net/web_projects/loopstudio/"
+                                class="px-4 btn">Code&gt;</a>
+                        </div>
+                    </div>
+                    <!-- poject 3 -->
+                    <!-- poject 4  -->
+                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                            <img src="assets/images/web-projects/room.png" alt="room"
+                                class="h-full w-auto object-center object-cover">
+
+                        </div>
+                        <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                            <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
+                        </div>
+                        <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                            <h1 class="project-title text-base text-white ">Room</h1>
+                            <p class="project-para text-sm text-[var(--light-text)]">A modern landing page for a room
+                                booking application.</p>
+                        </div>
+                        <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                            <a target="_blank" href="https://github.com/dotHP-harshu/Web_projects/tree/main/room"
+                                class="px-4 btn">Live&gt;</a>
+                            <a target="_blank" href="https://dothp.bsite.net/web_projects/room/"
+                                class="px-4 btn">Code&gt;</a>
+                        </div>
+                    </div>
+                    <!-- poject 4 -->
+                    <!-- poject 5  -->
+                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                            <img src="assets/images/web-projects/ecoshop.png" alt="ecoshop"
+                                class="h-full w-auto object-center object-cover">
+
+                        </div>
+                        <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                            <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
+                        </div>
+                        <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                            <h1 class="project-title text-base text-white ">EchoShop</h1>
+                            <p class="project-para text-sm text-[var(--light-text)]">A complete frontend e-commerce
+                                store.</p>
+                        </div>
+                        <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                            <a target="_blank" href="https://github.com/dotHP-harshu/Web_projects/tree/main/ecoshop/"
+                                class="px-4 btn">Live&gt;</a>
+                            <a target="_blank" href="https://dothp.bsite.net/web_projects/echoShop/"
+                                class="px-4 btn">Code&gt;</a>
+                        </div>
+                    </div>
+                    <!-- poject 5 -->
+                    <!-- poject 6  -->
+                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                            <img src="assets/images/web-projects/eduwave.png" alt="eduwave"
+                                class="h-full w-auto object-center object-cover">
+
+                        </div>
+                        <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                            <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
+                        </div>
+                        <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                            <h1 class="project-title text-base text-white ">Eduwave</h1>
+                            <p class="project-para text-sm text-[var(--light-text)]">An educational platform UI built using core web technologies.</p>
+                        </div>
+                        <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                            <a target="_blank" href="https://github.com/dotHP-harshu/Web_projects/tree/main/eduwave/"
+                                class="px-4 btn">Live&gt;</a>
+                            <a target="_blank" href="https://dothp.bsite.net/web_projects/eduwave/"
+                                class="px-4 btn">Code&gt;</a>
+                        </div>
+                    </div>
+                    <!-- poject 6 -->
+                </div>
+            </div>
+            <!-- ----------- Project section ends here------------- -->
+
+            <!-- ----------- Project section starts here------------- -->
+            <div class="project-sections js-projects mt-12">
+                <div class="section-head flex items-center justify-between">
+                    <div class="flex items-center">
+                        <span class="highlight-text text-xl font-bold">#</span>
+                        <h1 class="text-xl font-semibold">JavaScript projects</h1>
+                        <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)]"></span>
+                    </div>
+                    <div>
+                        <a href="https://dothp-harshu.github.io/js_projects.io/" target="_blank"
+                            class="text-white text-lg">view all~~></a>
+                    </div>
+                </div>
+                <div class="projects flex gap-10 flex-wrap justify-center items-center py-10 ">
+                    <!-- poject 1 -->
+                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                            <img src="assets/images/js-projects/password_generator.png" alt="password_generator"
+                                class="w-auto h-full object-center object-cover">
+                        </div>
+                        <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                            <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
+                        </div>
+                        <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                            <h1 class="project-title text-base text-white ">Password Generator</h1>
+                            <p class="project-para text-sm text-[var(--light-text)]">A tool to generate random passwords
+                                with customizable settings.</p>
+                        </div>
+                        <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                            <a target="_blank" target="_blank"
+                                href="https://htmlpreview.github.io/?https://github.com/dotHP-harshu/js_projects/blob/main/password_generator/index.html"
+                                class="px-4 btn">Live&gt;</a>
+                            <a target="_blank" target="_blank"
+                                href="https://github.com/dotHP-harshu/js_projects/tree/main/password_generator"
+                                class="px-4 btn">Code&gt;</a>
+                        </div>
+                    </div>
+                    <!-- poject 1 -->
+
+                    <!-- poject 2 -->
+                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                            <img src="assets/images/js-projects/github_profile.png" alt="github_profile"
+                                class="w-auto h-full object-center object-cover">
+                        </div>
+                        <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                            <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">api</span>
+                        </div>
+                        <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                            <h1 class="project-title text-base text-white ">Github profile finder</h1>
+                            <p class="project-para text-sm text-[var(--light-text)]">A tool using the GitHub API to
+                                fetch user profiles by their usernames.</p>
+                        </div>
+                        <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                            <a target="_blank"
+                                href="https://htmlpreview.github.io/?https://github.com/dotHP-harshu/js_projects/blob/main/github_profile/index.html"
+                                class="px-4 btn">Live&gt;</a>
+                            <a target="_blank"
+                                href="https://github.com/dotHP-harshu/js_projects/tree/main/github_profile"
+                                class="px-4 btn">Code&gt;</a>
+                        </div>
+                    </div>
+                    <!-- poject 2 -->
+
+                    <!-- poject 3 -->
+                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                            <img src="assets/images/js-projects/tic_tac_toe.png" alt="tic_tac_toe"
+                                class="w-auto h-full object-center object-cover">
+                        </div>
+                        <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                            <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
+                        </div>
+                        <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                            <h1 class="project-title text-base text-white ">Tic Tac Toe</h1>
+                            <p class="project-para text-sm text-[var(--light-text)]">A classic tic tac toe game with
+                                options to reset and start new games.</p>
+                        </div>
+                        <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                            <a target="_blank"
+                                href="https://htmlpreview.github.io/?https://github.com/dotHP-harshu/js_projects/blob/main/tic_tac_toe/index.html"
+                                class="px-4 btn">Live&gt;</a>
+                            <a target="_blank" href="https://github.com/dotHP-harshu/js_projects/tree/main/tic_tac_toe/"
+                                class="px-4 btn">Code&gt;</a>
+                        </div>
+                    </div>
+                    <!-- poject 3 -->
+
+                    <!-- poject 4 -->
+                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                            <img src="assets/images/js-projects/joke_generator.png" alt="joke_generator"
+                                class="w-auto h-full object-center object-cover">
+                        </div>
+                        <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                            <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">api</span>
+                        </div>
+                        <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                            <h1 class="project-title text-base text-white ">Joke Generator</h1>
+                            <p class="project-para text-sm text-[var(--light-text)]">An API-based application that
+                                generates random jokes in both Hindi and English.</p>
+                        </div>
+                        <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                            <a target="_blank"
+                                href="https://htmlpreview.github.io/?https://github.com/dotHP-harshu/js_projects/blob/main/joke_generator/index.html"
+                                class="px-4 btn">Live&gt;</a>
+                            <a target="_blank"
+                                href="https://github.com/dotHP-harshu/js_projects/tree/main/joke_generator/"
+                                class="px-4 btn">Code&gt;</a>
+                        </div>
+                    </div>
+                    <!-- poject 4 -->
+
+                    <!-- poject 5 -->
+                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                            <img src="assets/images/js-projects/qr_code.png" alt="qr_code"
+                                class="w-auto h-full object-center object-cover">
+                        </div>
+                        <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                            <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">api</span>
+                        </div>
+                        <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                            <h1 class="project-title text-base text-white ">QR Code Generator</h1>
+                            <p class="project-para text-sm text-[var(--light-text)]">An API-based tool for generating QR
+                                codes for text or links.</p>
+                        </div>
+                        <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                            <a target="_blank"
+                                href="https://htmlpreview.github.io/?https://github.com/dotHP-harshu/js_projects/blob/main/QR_code/index.html"
+                                class="px-4 btn">Live&gt;</a>
+                            <a target="_blank" href="https://github.com/dotHP-harshu/js_projects/tree/main/qr_code/"
+                                class="px-4 btn">Code&gt;</a>
+                        </div>
+                    </div>
+                    <!-- poject 5 -->
+
+                    <!-- poject 6 -->
+                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
+                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                            <img src="assets/images/js-projects/rock_paper_scissors.png" alt="rock_paper_scissors"
+                                class="w-auto h-full object-center object-cover">
+                        </div>
+                        <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
+                            <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                            <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
+                        </div>
+                        <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
+                            <h1 class="project-title text-base text-white ">Rock Paper Scissors</h1>
+                            <p class="project-para text-sm text-[var(--light-text)]">A classic rock paper scissors game
+                                with two mode. we can calculate the score. </p>
+                        </div>
+                        <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
+                            <a target="_blank" href="https://dothp.bsite.net/js_projects/rock_paper_scissors"
+                                class="px-4 btn">Live&gt;</a>
+                            <a target="_blank"
+                                href="https://github.com/dotHP-harshu/js_projects/tree/main/rock_paper_scissors"
+                                class="px-4 btn">Code&gt;</a>
+                        </div>
+                    </div>
+                    <!-- poject 6 -->
+
+                </div>
+            </div>
+            <!-- ----------- Project section ends here------------- -->
+
+        </section>
+        <!-- -------- Projects ends here ------  -->
+
+
+    </main>
+    <!-- --------- Main ends here --------------- -->
+
+    <hr class="w-full">
+
+    <!-- --------- Footer starts here --------------- -->
+    <footer class="w-[80%] block mx-auto">
+        <div class="footer flex justify-around items-center py-20">
+
+            <div class="footer-left ">
+                <div class="footer-logo flex gap-6">
+                    <p class="text-base font-extrabold ">DotHP</p>
+                    <img src="assets/images/white-sign.svg" alt="white-sign" class="h-8 w-auto">
+                </div>
+                <div>
+                    <p class="text-base">Frontend Developer</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="#" class="w-6 h-6"><img src="assets/images/github-icon.svg" alt="github-icon"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright w-full py-4">
+            <p class=" w-fit mx-auto text-sm text-[var(--light-text)]">&copy; 2025 | Developed by Harhs Prajapati</p>
+        </div>
+    </footer>
+    <!-- --------- Footer starts here --------------- -->
+</body>
+
+</html>
+
+
+<!-- push all project in main branch and public folder in page branch  -->

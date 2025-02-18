@@ -7,5 +7,5 @@
 }
 
 .btn{
-    @apply inline-block px-6 py-2 font-light text-sm border-[1px] border-[var(--light-tex)];
+    @apply inline-block px-6 py-2 font-light text-sm border-[1px] border-[var(--light-tex)] hover:text-[var(--main-color)] active:bg-[var(--main-color)] active:text-white transition-colors;
 }
