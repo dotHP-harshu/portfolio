@@ -8,11 +8,17 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/output.css">
     <link rel="stylesheet" href="css/style.css">
+
+     <!-- ---------gsap-------- -->
+     <script src="gsap/gsap.min.js"></script>
+     <script src="gsap/ScrollTrigger.min.js"></script>
+     <script src="gsap/TextPlugin.min.js"></script>
+    <!-- ---------gsap-------- -->
 </head>
 
-<body class="bg-[var(--bg-color)] text-white font-[main] overflow-x-hidden">
+<body class="w-full bg-[var(--bg-color)] text-white font-[main] overflow-x-hidden">
     <!-- ------------- link-elements starts here----------- -->
-    <div class="elements absolute top-0 left-4">
+    <div class="elements absolute top-0 left-4 max-mobile:left-0">
         <div class="flex flex-col gap-2 items-center">
             <svg viewBox="0 0 16 250" class="h-[250px]">
                 <path style="stroke: white; stroke-width: 2; fill: none; stroke-dasharray: 250;" d="M8 0 V2500" stroke-linecap="round" />
@@ -24,7 +30,7 @@
     <!-- ------------- link-elements ends here----------- -->
 
     <!-- --------- Main starts here --------------- -->
-    <main class="block w-[80%] mx-auto p-4 ">
+    <main class="block w-[80%] mx-auto py-6 relative overflow-x-hidden">
 
 
 
@@ -33,13 +39,19 @@
             <div class="logo">
                 <p class="text-base font-extrabold ">DotHP</p>
             </div>
-            <ul class="menu flex gap-6 items-center ">
+            <div class="menu-icon w-6 h-6 overflow-hidden relative max-mobile:inline-block hidden">
+                <img src="assets/images/menu-icon.png" alt="menu-icon" class="h-full w-full transition-transform absolute top-0 left-0  max-mobile:scale-100">
+                <img src="assets/images/cross-icon.svg" alt="menu-icon" class="h-full w-full transition-transform absolute top-0 left-0  max-mobile:scale-0">
+            </div>
+            <ul class="menu flex gap-6 transition-all items-center max-mobile:flex max-mobile:bg-[var(--bg-color)] max-mobile:z-50 max-mobile:p-10 max-mobile:absolute max-mobile:flex-col max-mobile:items-start max-mobile:w-[60vw] max-mobile:h-[80vh] max-mobile:top-[10vh] max-mobile:right-[-60vw] max-mobile:border-2 max-mobile:border-white">
+
                 <li class="menu-links ">
-                    <a href="index.html" class="no-underline text-[var(--light-text)]text-base hover:text-[white] transition-colors"><span
+                    <a href="index.html"
+                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>home</a>
                 </li>
                 <li class="menu-links ">
-                    <a href="project.html"
+                    <a href="projects.html"
                         class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>works</a>
                 </li>
@@ -59,7 +71,7 @@
 
         <!-- -------- path section start here ------------- -->
          <section class="path mt-10">
-            <p class="text-5xl"><span class="highlight-text">/</span>contact</p>
+            <p class="text-5xl max-mobile:text-3xl"><span class="highlight-text">/</span>contact</p>
          </section>
         <!-- -------- path section endt here ------------- -->
 
@@ -74,15 +86,15 @@
                 </div>
             </div>
             <!-- rectangle element  -->
-            <div class="section-head flex items-center">
+            <div class="section-head flex items-center ">
                 <h1 class="text-sm text-[var(--light-text)]">who am i?</h1>
             </div>
-            <div class="contact flex items-center min-h-80">
-                <div class="contact-left w-1/2 flex flex-col justify-center items-start">
+            <div class="contact flex items-center min-h-[70vh] max-mobile:flex-col max-mobile:gap-10 max-mobile:h-auto">
+                <div class="contact-left w-1/2 flex flex-col justify-center items-start max-mobile:w-full">
                     <p class="contact-para text-sm text-[var(--light-text)]">Lorem ipsum dolor, sit amet consectetur
                         adipisicing elit. Ratione accusamus consectetur magni minima? Ab, quaerat.</p>
                 </div>
-                <div class="contact-right w-1/2 flex flex-col justify-center items-center">
+                <div class="contact-right w-1/2 flex flex-col justify-center items-center max-mobile:w-full">
                     <div class="contact-detail min-w-60 border-[1px] border-[var(--light-text)] px-4 py-2">
                         <h1 class="font-semibold text-sm mb-2">Message me here!</h1>
                         <a href="#" class="contact flex items-center gap-1">
@@ -106,7 +118,7 @@
 
     <!-- --------- Footer starts here --------------- -->
     <footer class="w-[80%] block mx-auto">
-        <div class="footer flex justify-around items-center py-20">
+        <div class="footer flex justify-around items-center py-20 max-mobile:flex-col max-mobile:gap-6 ">
 
             <div class="footer-left ">
                 <div class="footer-logo flex gap-6">
@@ -124,10 +136,14 @@
             </div>
         </div>
         <div class="copyright w-full py-4">
-            <p class=" w-fit mx-auto text-sm text-[var(--light-text)]">&copy; 2025 | Developed by Harhs Prajapati</p>
+            <p class=" w-fit mx-auto text-sm text-[var(--light-text)] text-center">&copy; 2025 | Developed by Harsh Prajapati</p>
         </div>
     </footer>
     <!-- --------- Footer starts here --------------- -->
+
+    <!-- --------- scripts --------------- -->
+     <script src="js/script.js"></script>
+    <!-- --------- scripts --------------- -->
 </body>
 
 </html>

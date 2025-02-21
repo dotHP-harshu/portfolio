@@ -8,11 +8,17 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/output.css">
     <link rel="stylesheet" href="css/style.css">
+
+     <!-- ---------gsap-------- -->
+     <script src="gsap/gsap.min.js"></script>
+     <script src="gsap/ScrollTrigger.min.js"></script>
+     <script src="gsap/TextPlugin.min.js"></script>
+    <!-- ---------gsap-------- -->
 </head>
 
-<body class="bg-[var(--bg-color)] text-white font-[main] overflow-x-hidden">
+<body class="w-full bg-[var(--bg-color)] text-white font-[main] overflow-x-hidden ">
     <!-- ------------- link-elements starts here----------- -->
-    <div class="elements absolute top-0 left-4">
+    <div class="elements absolute top-0 left-4 max-mobile:left-0">
         <div class="flex flex-col gap-2 items-center">
             <svg viewBox="0 0 16 250" class="h-[250px]">
                 <path style="stroke: white; stroke-width: 2; fill: none; stroke-dasharray: 250;" d="M8 0 V2500" stroke-linecap="round" />
@@ -24,7 +30,7 @@
     <!-- ------------- link-elements ends here----------- -->
 
     <!-- --------- Main starts here --------------- -->
-    <main class="block w-[80%] mx-auto p-4 ">
+    <main class="block w-[80%] mx-auto py-4 relative overflow-x-hidden ">
 
 
 
@@ -33,9 +39,14 @@
             <div class="logo">
                 <p class="text-base font-extrabold ">DotHP</p>
             </div>
-            <ul class="menu flex gap-6 items-center ">
+            <div class="menu-icon w-6 h-6 overflow-hidden relative max-mobile:inline-block hidden">
+                <img src="assets/images/menu-icon.png" alt="menu-icon" class="h-full w-full transition-transform absolute top-0 left-0  max-mobile:scale-100">
+                <img src="assets/images/cross-icon.svg" alt="menu-icon" class="h-full w-full transition-transform absolute top-0 left-0  max-mobile:scale-0">
+            </div>
+            <ul class="menu flex gap-6 transition-all items-center max-mobile:flex max-mobile:bg-[var(--bg-color)] max-mobile:p-10 max-mobile:absolute max-mobile:z-50 max-mobile:flex-col max-mobile:items-start max-mobile:w-[60vw] max-mobile:h-[80vh] max-mobile:top-[10vh] max-mobile:right-[-60vw] max-mobile:border-2 max-mobile:border-white">
                 <li class="menu-links ">
-                    <a href="index.html" class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
+                    <a href="index.html"
+                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>home</a>
                 </li>
                 <li class="menu-links ">
@@ -59,7 +70,7 @@
 
           <!-- -------- path section start here ------------- -->
           <section class="path mt-10">
-            <p class="text-5xl"><span class="highlight-text">/</span>about-me</p>
+            <p class="text-5xl max-mobile:text-3xl"><span class="highlight-text">/</span>about-me</p>
          </section>
         <!-- -------- path section endt here ------------- -->
 
@@ -74,16 +85,15 @@
                 </div>
             </div>
             <!-- rectangle element  -->
-            <div class="section-head flex items-center">
-                <h1 class="text-sm text-[var(--light-text)]">who am i?</h1>
-            </div>
-            <div class="about flex w-full">
-                <div class="about-left w-1/2 h-ful flex flex-col gap-6 justify-center items-start ">
-                    <p class="about-para text-lg text-[var(--light-text)]"> hello! I’m Harsh Prajapati.</p>
-                    <p class="about-para text-lg text-[var(--light-text)]">I’m a self-motivated web developer based in Uttar Pradesh, India. I loves transforming designs into clean, functional, and engaging web experiences. I am passionate about building responsive, and user-friendly websites.</p>
-                    <p class="about-para text-lg text-[var(--light-text)]">I turn designs into dynamic, high-performance websites that engage and inspire.I enjoy solving problems, optimizing performance, and creating intuitive user interfaces. My goal is to leverage my skills for freelancing and professional opportunities, crafting impactful digital solutions."</p>
-                    </div>
-                <div class="right w-1/2 flex justify-center items-center">
+            <div class="about flex w-full max-mobile:flex-col-reverse max-mobile:gap-10">
+                <div class="about-left w-1/2 h-ful flex flex-col gap-6 justify-center items-start max-mobile:w-full ">
+                    <p class="about-para text-lg text-[var(--light-text)] max-mobile:text-sm"> hello! I’m Harsh Prajapati.</p>
+                    <p class="about-para text-lg text-[var(--light-text)] max-mobile:text-sm">I’m a self-motivated web developer based in
+                        Uttar Pradesh, India. I loves transforming designs into clean, functional, and engaging web
+                        experiences. I am passionate about building responsive, and user-friendly websites.</p>
+                    <a href="about.html" class="btn">Read More&gt;</a>
+                </div>
+                <div class="right w-1/2 flex justify-center items-center max-mobile:w-full">
                     <img src="assets/images/about-img.png" alt="about-img" class="w-3/4 h-auto">
                 </div>
             </div>
@@ -95,15 +105,15 @@
             <div class="section-head flex items-center">
                 <span class="highlight-text text-xl font-bold">#</span>
                 <h1 class="text-xl font-semibold">skills</h1>
-                <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)]"></span>
+                <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)] max-mobile:w-20"></span>
             </div>
-            <div class="skil-left h-auto py-6 flex items-start">
-                <div class="skill-left w-[40%] h-full">
+            <div class="skil-left h-auto py-6 flex items-start max-mobile:flex-col">
+                <div class="skill-left w-[40%] h-full max-mobile:w-full">
                     <img src="assets/images/skill-img.svg" alt="skill-img" class="w-full h-auto">
                 </div>
-                <div class="skill-right flex gap-4 w-[60%]">
+                <div class="skill-right flex gap-4 w-[60%] max-mobile:w-full max-mobile:flex-col max-mobile:p-10 max-mobile:items-center">
                     <!-- skill-column  -->
-                    <div class="skill-column w-1/3">
+                    <div class="skill-column w-1/3 max-mobile:w-full">
                         <!-- skills  -->
                         <div class="language border-[1px] border-[var(--light-text)]">
                             <h1
@@ -117,7 +127,7 @@
                     </div>
                     <!-- skill-column  -->
                     <!-- skill-column  -->
-                    <div class="skill-column w-1/3 flex flex-col gap-4">
+                    <div class="skill-column w-1/3 flex flex-col gap-4 max-mobile:w-full">
                         <!-- skills  -->
                         <div class="database border-[1px] border-[var(--light-text)]">
                             <h1
@@ -143,7 +153,7 @@
                     </div>
                     <!-- skill-column  -->
                     <!-- skill-column  -->
-                    <div class="skill-column w-1/3 flex flex-col gap-4">
+                    <div class="skill-column w-1/3 flex flex-col gap-4 max-mobile:w-full">
                         <!-- skills  -->
                         <div class="tools border-[1px] border-[var(--light-text)]">
                             <h1
@@ -200,10 +210,14 @@
             </div>
         </div>
         <div class="copyright w-full py-4">
-            <p class=" w-fit mx-auto text-sm text-[var(--light-text)]">&copy; 2025 | Developed by Harhs Prajapati</p>
+            <p class=" w-fit mx-auto text-sm text-[var(--light-text)]">&copy; 2025 | Developed by Harsh Prajapati</p>
         </div>
     </footer>
     <!-- --------- Footer starts here --------------- -->
+
+    <!-- --------- scripts--------------- -->
+     <script src="js/script.js"></script>
+    <!-- --------- scripts--------------- -->
 </body>
 
 </html>

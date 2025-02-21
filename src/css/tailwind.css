@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.highlight-text{
-    @apply  text-[var(--main-color)] font-extrabold;
+.highlight-text {
+    @apply text-[var(--main-color)] font-extrabold;
 }
 
-.btn{
+.btn {
     @apply inline-block px-6 py-2 font-light text-sm border-[1px] border-[var(--light-tex)] hover:text-[var(--main-color)] active:bg-[var(--main-color)] active:text-white transition-colors;
+}
+
+.project {
+    @apply flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)];
+}
+
+.project-img {
+    @apply w-full overflow-hidden max-mobile:h-auto;
 }

@@ -8,23 +8,30 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/output.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- ---------gsap-------- -->
+    <script src="gsap/gsap.min.js"></script>
+    <script src="gsap/ScrollTrigger.min.js"></script>
+    <script src="gsap/TextPlugin.min.js"></script>
+    <!-- ---------gsap-------- -->
 </head>
 
-<body class="bg-[var(--bg-color)] text-white font-[main] overflow-x-hidden">
+<body class="w-full bg-[var(--bg-color)] text-white font-[main]  overflow-x-hidden">
     <!-- ------------- link-elements starts here----------- -->
-    <div class="elements absolute top-0 left-4">
-        <div class="flex flex-col gap-2 items-center">
+    <div class="link-element absolute top-0 left-4 max-mobile:left-0">
+        <div class="flex flex-col gap-2 items-center overflow-hidden">
             <svg viewBox="0 0 16 250" class="h-[250px]">
-                <path style="stroke: white; stroke-width: 2; fill: none; stroke-dasharray: 250;" d="M8 0 V2500" stroke-linecap="round" />
+                <path style="stroke: white; stroke-width: 2; fill: none; stroke-dasharray: 250;" d="M8 0 V2500"
+                    stroke-linecap="round" />
             </svg>
-            <a href="#"><img src="assets/images/github-icon.svg" alt="github" class="w-10 h-10"></a>
-            <a href="#"><img src="assets/images/instagram-icon.svg" alt="github" class="w-12 h-12 rounded-full"></a>
+            <a href="#"><img src="assets/images/github-icon.svg" alt="github" class="w-10 h-10 "></a>
+            <a href="#"><img src="assets/images/instagram-icon.svg" alt="github" class="w-12 h-12 rounded-full "></a>
         </div>
     </div>
     <!-- ------------- link-elements ends here----------- -->
 
     <!-- --------- Main starts here --------------- -->
-    <main class="block w-[80%] mx-auto p-4 ">
+    <main class="block w-[80%] mx-auto py-5 relative overflow-x-hidden">
 
 
 
@@ -33,9 +40,14 @@
             <div class="logo">
                 <p class="text-base font-extrabold ">DotHP</p>
             </div>
-            <ul class="menu flex gap-6 items-center ">
+            <div class="menu-icon w-6 h-6 overflow-hidden relative max-mobile:inline-block hidden">
+                <img src="assets/images/menu-icon.png" alt="menu-icon" class="h-full w-full transition-transform absolute top-0 left-0  max-mobile:scale-100">
+                <img src="assets/images/cross-icon.svg" alt="menu-icon" class="h-full w-full transition-transform absolute top-0 left-0  max-mobile:scale-0">
+            </div>
+            <ul class="menu flex gap-6 transition-all items-center max-mobile:flex max-mobile:bg-[var(--bg-color)] max-mobile:p-10 max-mobile:absolute max-mobile:flex-col max-mobile:items-start max-mobile:w-[60vw] max-mobile:h-[80vh] max-mobile:top-[10vh] max-mobile:right-[-60vw] max-mobile:border-2 max-mobile:border-white">
                 <li class="menu-links ">
-                    <a href="index.html" class="no-underline text-white text-base hover:text-[white] transition-colors"><span
+                    <a href="index.html"
+                        class="no-underline text-white text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>home</a>
                 </li>
                 <li class="menu-links ">
@@ -55,22 +67,26 @@
                 </li>
             </ul>
         </nav>
-        <!-- -------- Navbar starts here ------  -->
+        <!-- -------- Navbar ends here ------  -->
 
         <!-- -------- Hero starts here ------  -->
-        <section class="hero min-h-[90vh] flex w-full p-6">
+        <section class="hero min-h-[90vh] flex w-full p-6 max-mobile:flex-col-reverse max-mobile:gap-10 max-mobile:px-0">
             <!-- left-hero  -->
-            <div class="hero-left w-1/2  flex flex-col justify-center items-start gap-10">
-                <h1 class="hero-heading text-2xl font-extrabold">Hi, I’m <span class="highlight-text">Harsh
-                        Prajapati</span><br>A Passionate Frontend Developer!</h1>
-                <p class="hero-para text-[var(--light-text)] text-base">Passionate about crafting elegant web solutions
+            <div class="hero-left w-1/2  flex flex-col justify-center items-start gap-4 max-mobile:w-full">
+                <div class="overflow-hidden">
+                    <h1 class=" overflow-hidden hero-heading text-2xl font-extrabold max-mobile:text-xl">Hi, I’m <span class="highlight-text">Harsh Prajapati</span></h1>
+                </div>
+                <div class="overflow-hidden">
+                    <h1 class=" overflow-hidden hero-heading text-2xl font-extrabold max-mobile:text-xl">A Passionate Frontend Developer!</h1>
+                </div>
+                <p class="hero-para text-[var(--light-text)] text-base mt-6 max-mobile:text-sm">Passionate about crafting elegant web solutions
                     with clean and efficient code. </p>
-                <a href="#" class="btn">Download
+                <a href="#" class="btn mt-6">Download
                     CV</a>
             </div>
             <!-- left-hero  -->
             <!-- right-hero  -->
-            <div class="right-hero w-1/2 flex justify-center items-center ">
+            <div class="right-hero w-1/2 flex justify-center items-center max-mobile:w-full ">
                 <div class="right-hero-img w-full flex justify-center items-center flex-col">
                     <img src="assets/images/right-hero-img.png" alt="right-hero-img" class="w-full h-auto">
                     <div class="w-[84%] flex gap-2 items-center py-1 px-2 border-[1px] border-white  ">
@@ -87,20 +103,21 @@
         <!-- -------- Quote starts here ------  -->
         <section class="relative w-full mt-16 flex justify-center items-center">
             <!-- rectangle element  -->
-            <div class="rect-elements absolute top-0 left-full">
+            <div class="rect-elements absolute top-0 left-full max-mobile:hidden">
                 <div class="flex flex-col gap-2 items-center">
                     <svg viewBox="0 0 300 200" class=" h-52 w-72">
-                        <path style="stroke: white; stroke-width: 1; fill: none; stroke-dasharray: 600;" d="M50 150 V50 H250 V150 H50" stroke-linecap="round" />
+                        <path style="stroke: white; stroke-width: 1; fill: none; stroke-dasharray: 600;"
+                            d="M50 150 V50 H250 V150 H50" stroke-linecap="round" />
                     </svg>
                 </div>
             </div>
             <!-- rectangle element  -->
             <div class="w-fit flex flex-col items-end">
-                <div class="quote w-fit px-8 py-6 border-2 border-white relative">
-                    <span class="absolute top-0 let-4 translate-y-[-50%] text-5xl px-2 bg-[var(--bg-color)]">"</span>
+                <div class="quote w-fit px-8 py-6 border-2 border-white relative max-mobile:px-4 max-mobile:py-3 ">
+                    <span class="absolute top-0 let-4 translate-y-[-50%] text-5xl px-2 bg-[var(--bg-color)] max-mobile:top-[5px] max-mobile:text-3xl max-mobile:px-2">"</span>
                     <span
-                        class="absolute bottom-0 right-4 translate-y-[50%] text-5xl px-2 bg-[var(--bg-color)]">"</span>
-                    <p class="text-xl font-semibold">Something is better than nothing.</p>
+                        class="absolute bottom-0 right-4 translate-y-[50%] text-5xl px-2 bg-[var(--bg-color)] max-mobile:bottom-[-5px] max-mobile:text-3xl max-mobile:px-2">"</span>
+                    <p class="text-xl font-semibold max-mobile:text-base relative">Something is better than nothing.</p>
                 </div>
                 <div class="quote-author w-fit p-4 border-2 border-t-0 border-white">
                     <p class="text-base">- Er. Who</p>
@@ -111,68 +128,86 @@
 
         <!-- -------- Projects starts here ------  -->
         <section class="project-container py-10 mt-16">
-            <div class="section-head flex items-center justify-between">
+            <div class="section-head flex items-center justify-between max-mobile:flex-col max-mobile:gap-6 max-mobile:items-start">
                 <div class="flex items-center">
                     <span class="highlight-text text-xl font-bold">#</span>
                     <h1 class="text-xl font-semibold">projects</h1>
-                    <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)]"></span>
+                    <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)] max-mobile:w-20"></span>
                 </div>
                 <div>
-                    <a href="projects.html" class="text-white text-lg">view all~~></a>
+                    <a href="projects.html" class="text-white text-sm">view all~~></a>
                 </div>
             </div>
-            <div class="projects flex flex-wrap justify-evenly items-center py-6 ">
+            <div class="projects flex flex-wrap gap-10 justify-center items-center py-10 ">
                 <!-- poject 1 -->
-                <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                    <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                <div class="project">
+                    <div class="project-img">
+                        <img src="assets/images/projects/shivaji.png" alt="shivaji"
+                            class="h-full w-auto object-cover object-center">
                     </div>
                     <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
                         <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
                         <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                        <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
+                        <span class="text-sm text-[var(--light-text)] uppercase">gsap</span>
                     </div>
                     <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
-                        <h1 class="project-title text-base text-white ">project name</h1>
-                        <p class="project-para text-sm text-[var(--light-text)]">Lorem ipsum dolor, sit amet consectetur
-                            adipisicing elit.</p>
+                        <h1 class="project-title text-base text-white ">Tribute Page</h1>
+                        <p class="project-para text-sm text-[var(--light-text)]">This is a tribute page dedicated to
+                            the legendary warrior Chhatrapati Shivaji Maharaj, founder of the Maratha Empire.</p>
                     </div>
                     <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
-                        <a href="#" class="px-4 btn">Live&gt;</a>
+                        <a target="_blank" href="https://dothp-harshu.github.io/chhatrapati_shivaji_maharaj/"
+                            class="px-4 btn">Live&gt;</a>
+                        <a target="_blank" href="https://github.com/dotHP-harshu/chhatrapati_shivaji_maharaj"
+                            class="px-4 btn">Code&gt;</a>
                     </div>
                 </div>
                 <!-- poject 1 -->
                 <!-- poject 2 -->
-                <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                    <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                <div class="project">
+                    <div class="project-img">
+                        <img src="assets/images/projects/resume_builder.png" alt="resume_builder"
+                            class="h-full w-auto object-cover object-center">
                     </div>
                     <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
                         <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
                         <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                        <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
                     </div>
                     <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
-                        <h1 class="project-title text-base text-white ">project name</h1>
-                        <p class="project-para text-sm text-[var(--light-text)]">Lorem ipsum dolor, sit amet consectetur
-                            adipisicing elit.</p>
+                        <h1 class="project-title text-base text-white ">Resume Builder</h1>
+                        <p class="project-para text-sm text-[var(--light-text)]"> simple and customizable Resume
+                            Builder web application that allows users to create their resumes easily.</p>
                     </div>
                     <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
-                        <a href="#" class="px-4 btn">Live&gt;</a>
+                        <a target="_blank" href="https://dothp-harshu.github.io/resume_builder.io/"
+                            class="px-4 btn">Live&gt;</a>
+                        <a target="_blank" href="https://github.com/dotHP-harshu/resume_builder.io"
+                            class="px-4 btn">Code&gt;</a>
                     </div>
                 </div>
                 <!-- poject 2 -->
                 <!-- poject 3  -->
-                <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                    <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                <div class="project">
+                    <div class="project-img">
+                        <img src="assets/images/projects/netflix.png" alt="netflix"
+                            class="w-full h-auto object-cover object-center">
                     </div>
                     <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
                         <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
                         <span class="text-sm text-[var(--light-text)] uppercase">css</span>
+                        <span class="text-sm text-[var(--light-text)] uppercase">JavaScript</span>
                     </div>
                     <div class="detail flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)]">
-                        <h1 class="project-title text-base text-white ">project name</h1>
-                        <p class="project-para text-sm text-[var(--light-text)]">Lorem ipsum dolor, sit amet consectetur
-                            adipisicing elit.</p>
+                        <h1 class="project-title text-base text-white ">Netflix</h1>
+                        <p class="project-para text-sm text-[var(--light-text)]">A clone of the popular Netflix
+                            platform using HTML, CSS, and JavaScript.</p>
                     </div>
                     <div class="projects-buttons border-y-[1px] border-[var(--light-text)] px-4 py-2 ">
-                        <a href="#" class="px-4 btn">Live&gt;</a>
+                        <a href="https://dothp.bsite.net/web_projects/netflix/" target="_blank"
+                            class="px-4 btn">Live&gt;</a>
+                        <a href="https://dothp.bsite.net/netflix/" target="_blank" class="px-4 btn">Code&gt;</a>
                     </div>
                 </div>
                 <!-- poject 3 -->
@@ -185,15 +220,15 @@
             <div class="section-head flex items-center">
                 <span class="highlight-text text-xl font-bold">#</span>
                 <h1 class="text-xl font-semibold">skills</h1>
-                <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)]"></span>
+                <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)] max-mobile:w-20"></span>
             </div>
-            <div class="skil-left h-auto py-6 flex items-start">
-                <div class="skill-left w-[40%] h-full">
+            <div class="skil-left h-auto py-6 flex items-start max-mobile:flex-col">
+                <div class="skill-left w-[40%] h-full max-mobile:w-full">
                     <img src="assets/images/skill-img.svg" alt="skill-img" class="w-full h-auto">
                 </div>
-                <div class="skill-right flex gap-4 w-[60%]">
+                <div class="skill-right flex gap-4 w-[60%] max-mobile:w-full max-mobile:flex-col max-mobile:p-10 max-mobile:items-center">
                     <!-- skill-column  -->
-                    <div class="skill-column w-1/3">
+                    <div class="skill-column w-1/3 max-mobile:w-full">
                         <!-- skills  -->
                         <div class="language border-[1px] border-[var(--light-text)]">
                             <h1
@@ -207,7 +242,7 @@
                     </div>
                     <!-- skill-column  -->
                     <!-- skill-column  -->
-                    <div class="skill-column w-1/3 flex flex-col gap-4">
+                    <div class="skill-column w-1/3 flex flex-col gap-4 max-mobile:w-full">
                         <!-- skills  -->
                         <div class="database border-[1px] border-[var(--light-text)]">
                             <h1
@@ -233,7 +268,7 @@
                     </div>
                     <!-- skill-column  -->
                     <!-- skill-column  -->
-                    <div class="skill-column w-1/3 flex flex-col gap-4">
+                    <div class="skill-column w-1/3 flex flex-col gap-4 max-mobile:w-full">
                         <!-- skills  -->
                         <div class="tools border-[1px] border-[var(--light-text)]">
                             <h1
@@ -267,11 +302,12 @@
 
         <!-- -------- About starts here ------  -->
         <section class="about mt-16 relative">
-             <!-- rectangle element  -->
-             <div class="rect-elements absolute top-0 right-full">
+            <!-- rectangle element  -->
+            <div class="rect-elements absolute top-0 right-full">
                 <div class="flex flex-col gap-2 items-center">
                     <svg viewBox="0 0 300 200" class=" h-52 w-72">
-                        <path style="stroke: white; stroke-width: 1; fill: none; stroke-dasharray: 600;" d="M50 150 V50 H250 V150 H50" stroke-linecap="round" />
+                        <path style="stroke: white; stroke-width: 1; fill: none; stroke-dasharray: 600;"
+                            d="M50 150 V50 H250 V150 H50" stroke-linecap="round" />
                     </svg>
                 </div>
             </div>
@@ -279,15 +315,17 @@
             <div class="section-head flex items-center">
                 <span class="highlight-text text-xl font-bold">#</span>
                 <h1 class="text-xl font-semibold">about-me</h1>
-                <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)]"></span>
+                <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)] max-mobile:w-20"></span>
             </div>
-            <div class="about flex w-full">
-                <div class="about-left w-1/2 h-ful flex flex-col gap-6 justify-center items-start ">
+            <div class="about flex w-full max-mobile:flex-col-reverse max-mobile:gap-10">
+                <div class="about-left w-1/2 h-ful flex flex-col gap-6 justify-center items-start max-mobile:w-full ">
                     <p class="about-para text-lg text-[var(--light-text)]"> hello! I’m Harsh Prajapati.</p>
-                    <p class="about-para text-lg text-[var(--light-text)]">I’m a self-motivated web developer based in Uttar Pradesh, India. I loves transforming designs into clean, functional, and engaging web experiences. I am passionate about building responsive, and user-friendly websites.</p>
+                    <p class="about-para text-lg text-[var(--light-text)]">I’m a self-motivated web developer based in
+                        Uttar Pradesh, India. I loves transforming designs into clean, functional, and engaging web
+                        experiences. I am passionate about building responsive, and user-friendly websites.</p>
                     <a href="about.html" class="btn">Read More&gt;</a>
                 </div>
-                <div class="right w-1/2 flex justify-center items-center">
+                <div class="right w-1/2 flex justify-center items-center max-mobile:w-full">
                     <img src="assets/images/about-img.png" alt="about-img" class="w-3/4 h-auto">
                 </div>
             </div>
@@ -299,14 +337,14 @@
             <div class="section-head flex items-center">
                 <span class="highlight-text text-xl font-bold">#</span>
                 <h1 class="text-xl font-semibold">contact-me</h1>
-                <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)]"></span>
+                <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)] max-mobile:w-20"></span>
             </div>
-            <div class="contact flex items-center min-h-80">
-                <div class="contact-left w-1/2 flex flex-col justify-center items-start">
+            <div class="contact flex items-center min-h-80 max-mobile:flex-col max-mobile:gap-10 max-mobile:mt-10 ">
+                <div class="contact-left w-1/2 flex flex-col justify-center max-mobile:w-full items-start">
                     <p class="contact-para text-sm text-[var(--light-text)]">Lorem ipsum dolor, sit amet consectetur
                         adipisicing elit. Ratione accusamus consectetur magni minima? Ab, quaerat.</p>
                 </div>
-                <div class="contact-right w-1/2 flex flex-col justify-center items-center">
+                <div class="contact-right w-1/2 flex flex-col justify-center max-mobile:w-full items-center">
                     <div class="contact-detail min-w-60 border-[1px] border-[var(--light-text)] px-4 py-2">
                         <h1 class="font-semibold text-sm mb-2">Message me here!</h1>
                         <a href="#" class="contact flex items-center gap-1">
@@ -348,10 +386,16 @@
             </div>
         </div>
         <div class="copyright w-full py-4">
-            <p class=" w-fit mx-auto text-sm text-[var(--light-text)]">&copy; 2025 | Developed by Harhs Prajapati</p>
+            <p class=" w-fit mx-auto text-sm text-[var(--light-text)] text-center">&copy; 2025 | Developed by Harhs Prajapati</p>
         </div>
     </footer>
     <!-- --------- Footer starts here --------------- -->
+
+
+    <!-- ---------- script ----------- -->
+    <!-- <script src="js/animation.js"></script> -->
+    <script src="js/script.js"></script>
+    <!-- ---------- script ----------- -->
 </body>
 
 </html>

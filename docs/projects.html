@@ -8,11 +8,17 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/output.css">
     <link rel="stylesheet" href="css/style.css">
+
+     <!-- ---------gsap-------- -->
+     <script src="gsap/gsap.min.js"></script>
+     <script src="gsap/ScrollTrigger.min.js"></script>
+     <scrip src="gsap/TextPlugin.min.js"></script>
+    <!-- ---------gsap-------- -->
 </head>
 
-<body class="bg-[var(--bg-color)] text-white font-[main] overflow-x-hidden">
+<body class=" w-full bg-[var(--bg-color)] text-white font-[main] overflow-x-hidden">
     <!-- ------------- link-elements starts here----------- -->
-    <div class="elements absolute top-0 left-4">
+    <div class="elements absolute top-0 left-4 max-mobile:left-0">
         <div class="flex flex-col gap-2 items-center">
             <svg viewBox="0 0 16 250" class="h-[250px]">
                 <path style="stroke: white; stroke-width: 2; fill: none; stroke-dasharray: 250;" d="M8 0 V2500"
@@ -25,7 +31,7 @@
     <!-- ------------- link-elements ends here----------- -->
 
     <!-- --------- Main starts here --------------- -->
-    <main class="block w-[80%] mx-auto p-4 ">
+    <main class="block w-[80%] mx-auto py-5 relative overflow-hidden ">
 
 
 
@@ -34,10 +40,14 @@
             <div class="logo">
                 <p class="text-base font-extrabold ">DotHP</p>
             </div>
-            <ul class="menu flex gap-6 items-center ">
+            <div class="menu-icon w-6 h-6 overflow-hidden relative max-mobile:inline-block hidden">
+                <img src="assets/images/menu-icon.png" alt="menu-icon" class="h-full w-full transition-transform absolute top-0 left-0  max-mobile:scale-100">
+                <img src="assets/images/cross-icon.svg" alt="menu-icon" class="h-full w-full transition-transform absolute top-0 left-0  max-mobile:scale-0">
+            </div>
+            <ul class="menu flex gap-6 transition-all items-center max-mobile:flex max-mobile:bg-[var(--bg-color)] max-mobile:p-10 max-mobile:absolute max-mobile:flex-col max-mobile:items-start max-mobile:w-[60vw] max-mobile:h-[80vh] max-mobile:top-[10vh] max-mobile:right-[-60vw] max-mobile:border-2 max-mobile:border-white">
                 <li class="menu-links ">
                     <a href="index.html"
-                        class="no-underline text-[var(--light-text)]  text-base hover:text-[white] transition-colors"><span
+                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>home</a>
                 </li>
                 <li class="menu-links ">
@@ -61,7 +71,7 @@
 
         <!-- -------- path section start here ------------- -->
         <section class="path mt-10">
-            <p class="text-5xl"><span class="highlight-text">/</span>projects</p>
+            <p class="text-5xl max-mobile:text-3xl"><span class="highlight-text">/</span>projects</p>
         </section>
         <!-- -------- path section endt here ------------- -->
 
@@ -71,10 +81,10 @@
             <div class="project-sections">
                 <div class="projects flex flex-wrap items-center gap-10 py-6 justify-center">
                     <!-- poject 1 -->
-                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                        <div class="project-img w-full h-44 overflow-hidden ">
+                    <div class="project">
+                        <div class="project-img">
                             <img src="assets/images/projects/resume_builder.png" alt="resume_builder"
-                                class="h-full w-auto object-cover object-center">
+                                class="w-full h-auto object-center object-cover">
                         </div>
                         <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
                             <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
@@ -95,10 +105,10 @@
                     </div>
                     <!-- poject 1 -->
                     <!-- poject 2 -->
-                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                        <div class="project-img w-full h-44 overflow-hidden ">
+                    <div class="project">
+                        <div class="project-img">
                             <img src="assets/images/projects/shivaji.png" alt="shivaji"
-                                class="h-full w-auto object-cover object-center">
+                                class="w-full h-auto object-center object-cover">
                         </div>
                         <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
                             <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
@@ -125,22 +135,22 @@
 
             <!-- ----------- Project section starts here------------- -->
             <div class="project-sections web-projects mt-10">
-                <div class="section-head flex items-center justify-between">
+                <div class="section-head flex items-center justify-between max-mobile:flex-col max-mobile:gap-6 max-mobile:items-start">
                     <div class="flex items-center">
                         <span class="highlight-text text-xl font-bold">#</span>
-                        <h1 class="text-xl font-semibold">Web projects</h1>
-                        <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)]"></span>
+                        <h1 class="text-xl font-semibold">Web Projects</h1>
                     </div>
                     <div>
-                        <a target="_blank" href="https://dothp-harshu.github.io/Web_projects.io/" class="text-white text-lg">view all~~></a>
+                        <a href="projects.html" target="_blank" class="text-white text-sm">view all~~></a>
                     </div>
+                </div>
                 </div>
                 <div class="projects flex flex-wrap gap-10 justify-center items-center py-10 ">
                     <!-- poject 1 -->
-                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                        <div class="project-img w-full h-44 overflow-hidden ">
+                    <div class="project">
+                        <div class="project-img">
                             <img src="assets/images/projects/netflix.png" alt="netflix"
-                                class="h-full w-auto object-center object-cover">
+                                class="h-full w-auto object-center object-cover max-mobile:w-full max-mobile:h-auto">
                         </div>
                         <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
                             <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
@@ -159,10 +169,10 @@
                     </div>
                     <!-- poject 1 -->
                     <!-- poject 2 -->
-                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                    <div class="project">
+                        <div class="project-img">
                             <img src="assets/images/web-projects/bookmark.png" alt="bookmark"
-                                class="h-full w-auto object-center object-cover">
+                                class="h-full w-auto object-center object-cover max-mobile:w-full max-mobile:h-auto">
                         </div>
                         <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
                             <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
@@ -183,10 +193,10 @@
                     </div>
                     <!-- poject 2 -->
                     <!-- poject 3  -->
-                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                    <div class="project">
+                        <div class="project-img">
                             <img src="assets/images/web-projects/loopstudio.png" alt="loopstudio"
-                                class="h-full w-auto object-center object-cover">
+                                class="h-full w-auto object-center object-cover max-mobile:w-full max-mobile:h-auto">
 
                         </div>
                         <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
@@ -208,10 +218,10 @@
                     </div>
                     <!-- poject 3 -->
                     <!-- poject 4  -->
-                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                    <div class="project">
+                        <div class="project-img">
                             <img src="assets/images/web-projects/room.png" alt="room"
-                                class="h-full w-auto object-center object-cover">
+                                class="h-full w-auto object-center object-cover max-mobile:w-full max-mobile:h-auto">
 
                         </div>
                         <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
@@ -233,10 +243,10 @@
                     </div>
                     <!-- poject 4 -->
                     <!-- poject 5  -->
-                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                    <div class="project">
+                        <div class="project-img">
                             <img src="assets/images/web-projects/ecoshop.png" alt="ecoshop"
-                                class="h-full w-auto object-center object-cover">
+                                class="h-full w-auto object-center object-cover max-mobile:w-full max-mobile:h-auto">
 
                         </div>
                         <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
@@ -258,10 +268,10 @@
                     </div>
                     <!-- poject 5 -->
                     <!-- poject 6  -->
-                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                    <div class="project">
+                        <div class="project-img">
                             <img src="assets/images/web-projects/eduwave.png" alt="eduwave"
-                                class="h-full w-auto object-center object-cover">
+                                class="h-full w-auto object-center object-cover max-mobile:w-full max-mobile:h-auto">
 
                         </div>
                         <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
@@ -288,22 +298,22 @@
             <!-- ----------- Project section starts here------------- -->
             <div class="project-sections js-projects mt-12">
                 <div class="section-head flex items-center justify-between">
-                    <div class="flex items-center">
-                        <span class="highlight-text text-xl font-bold">#</span>
-                        <h1 class="text-xl font-semibold">JavaScript projects</h1>
-                        <span class="inline-block ml-4 w-60 h-[2px] bg-[var(--main-color)]"></span>
-                    </div>
-                    <div>
-                        <a href="https://dothp-harshu.github.io/js_projects.io/" target="_blank"
-                            class="text-white text-lg">view all~~></a>
+                    <div class="section-head flex items-center justify-between max-mobile:flex-col max-mobile:gap-6 max-mobile:items-start">
+                        <div class="flex items-center">
+                            <span class="highlight-text text-xl font-bold">#</span>
+                            <h1 class="text-xl font-semibold">JS Projects</h1>
+                        </div>
+                        <div>
+                            <a href="projects.html" target="_blank" class="text-white text-sm">view all~~></a>
+                        </div>
                     </div>
                 </div>
                 <div class="projects flex gap-10 flex-wrap justify-center items-center py-10 ">
                     <!-- poject 1 -->
-                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                    <div class="project">
+                        <div class="project-img">
                             <img src="assets/images/js-projects/password_generator.png" alt="password_generator"
-                                class="w-auto h-full object-center object-cover">
+                                class="w-full h-auto object-center object-cover">
                         </div>
                         <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
                             <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
@@ -327,10 +337,10 @@
                     <!-- poject 1 -->
 
                     <!-- poject 2 -->
-                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                    <div class="project">
+                        <div class="project-img">
                             <img src="assets/images/js-projects/github_profile.png" alt="github_profile"
-                                class="w-auto h-full object-center object-cover">
+                                class="w-full h-auto object-center object-cover">
                         </div>
                         <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
                             <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
@@ -355,10 +365,10 @@
                     <!-- poject 2 -->
 
                     <!-- poject 3 -->
-                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                    <div class="project">
+                        <div class="project-img">
                             <img src="assets/images/js-projects/tic_tac_toe.png" alt="tic_tac_toe"
-                                class="w-auto h-full object-center object-cover">
+                                class="w-full h-auto object-center object-cover">
                         </div>
                         <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
                             <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
@@ -381,10 +391,10 @@
                     <!-- poject 3 -->
 
                     <!-- poject 4 -->
-                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                    <div class="project">
+                        <div class="project-img">
                             <img src="assets/images/js-projects/joke_generator.png" alt="joke_generator"
-                                class="w-auto h-full object-center object-cover">
+                                class="w-full h-auto object-center object-cover">
                         </div>
                         <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
                             <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
@@ -409,10 +419,10 @@
                     <!-- poject 4 -->
 
                     <!-- poject 5 -->
-                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                    <div class="project">
+                        <div class="project-img">
                             <img src="assets/images/js-projects/qr_code.png" alt="qr_code"
-                                class="w-auto h-full object-center object-cover">
+                                class="w-full h-auto object-center object-cover">
                         </div>
                         <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
                             <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
@@ -436,10 +446,10 @@
                     <!-- poject 5 -->
 
                     <!-- poject 6 -->
-                    <div class="project flex flex-col w-72 h-auto border-[1px] border-[var(--light-text)] ">
-                        <div class="project-img w-full h-44 overflow-hidden bg-red-400">
+                    <div class="project">
+                        <div class="project-img">
                             <img src="assets/images/js-projects/rock_paper_scissors.png" alt="rock_paper_scissors"
-                                class="w-auto h-full object-center object-cover">
+                                class="w-full h-auto object-center object-cover">
                         </div>
                         <div class="technologies border-y-[1px] border-[var(--light-text)] px-4 py-2">
                             <span class="text-sm text-[var(--light-text)] uppercase">HTML</span>
@@ -494,10 +504,14 @@
             </div>
         </div>
         <div class="copyright w-full py-4">
-            <p class=" w-fit mx-auto text-sm text-[var(--light-text)]">&copy; 2025 | Developed by Harhs Prajapati</p>
+            <p class=" w-fit mx-auto text-sm text-[var(--light-text)] text-center">&copy; 2025 | Developed by Harsh Prajapati</p>
         </div>
     </footer>
     <!-- --------- Footer starts here --------------- -->
+
+    <!-- ------------- scripts -------------------- -->
+     <script src="js/script.js"></script>
+    <!-- ------------- scripts -------------------- -->
 </body>
 
 </html>
