@@ -18,7 +18,7 @@
 
 <body class="w-full bg-[var(--bg-color)] text-white font-[main] overflow-x-hidden ">
     <!-- ------------- link-elements starts here----------- -->
-    <div class="elements absolute top-0 left-4 max-mobile:left-0">
+    <div class="link-element absolute top-0 left-4 max-mobile:left-0">
         <div class="flex flex-col gap-2 items-center">
             <svg viewBox="0 0 16 250" class="h-[250px]">
                 <path style="stroke: white; stroke-width: 2; fill: none; stroke-dasharray: 250;" d="M8 0 V2500" stroke-linecap="round" />
@@ -35,7 +35,7 @@
 
 
         <!-- -------- Navbar starts here ------  -->
-        <nav class="flex justify-between items-center">
+        <nav class="flex justify-between items-center relative">
             <div class="logo">
                 <p class="text-base font-extrabold ">DotHP</p>
             </div>
@@ -43,25 +43,25 @@
                 <img src="assets/images/menu-icon.png" alt="menu-icon" class="h-full w-full transition-transform absolute top-0 left-0  max-mobile:scale-100">
                 <img src="assets/images/cross-icon.svg" alt="menu-icon" class="h-full w-full transition-transform absolute top-0 left-0  max-mobile:scale-0">
             </div>
-            <ul class="menu flex gap-6 transition-all items-center max-mobile:flex max-mobile:bg-[var(--bg-color)] max-mobile:p-10 max-mobile:absolute max-mobile:z-50 max-mobile:flex-col max-mobile:items-start max-mobile:w-[60vw] max-mobile:h-[80vh] max-mobile:top-[10vh] max-mobile:right-[-60vw] max-mobile:border-2 max-mobile:border-white">
-                <li class="menu-links ">
+            <ul class="menu flex gap-6 transition-all z-50 items-center max-mobile:flex max-mobile:bg-[var(--bg-color)] max-mobile:p-10 max-mobile:absolute max-mobile:flex-col max-mobile:items-start max-mobile:w-[60vw] max-mobile:h-[80vh] max-mobile:top-[10vh] max-mobile:right-[-60vw] max-mobile:border-2 max-mobile:border-white">
+                <li class="menu-links overflow-hidden">
                     <a href="index.html"
-                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
+                        class="no-underline inline-block  text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>home</a>
                 </li>
-                <li class="menu-links ">
+                <li class="menu-links overflow-hidden">
                     <a href="projects.html"
-                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
+                        class="no-underline inline-block text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>works</a>
                 </li>
-                <li class="menu-links ">
+                <li class="menu-links overflow-hidden">
                     <a href="about.html"
                         class="no-underline text-white text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>about-me</a>
                 </li>
-                <li class="menu-links ">
+                <li class="menu-links overflow-hidden ">
                     <a href="contact.html"
-                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
+                        class="no-underline inline-block text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>contact</a>
                 </li>
             </ul>
@@ -76,24 +76,15 @@
 
         <!-- -------- About starts here ------  -->
         <section class="about mt-16 relative">
-             <!-- rectangle element  -->
-             <div class="rect-elements absolute top-0 left-full">
-                <div class="flex flex-col gap-2 items-center">
-                    <svg viewBox="0 0 300 200" class=" h-52 w-72">
-                        <path style="stroke: white; stroke-width: 1; fill: none; stroke-dasharray: 600;" d="M50 150 V50 H250 V150 H50" stroke-linecap="round" />
-                    </svg>
-                </div>
-            </div>
-            <!-- rectangle element  -->
             <div class="about flex w-full max-mobile:flex-col-reverse max-mobile:gap-10">
                 <div class="about-left w-1/2 h-ful flex flex-col gap-6 justify-center items-start max-mobile:w-full ">
                     <p class="about-para text-lg text-[var(--light-text)] max-mobile:text-sm"> hello! I’m Harsh Prajapati.</p>
                     <p class="about-para text-lg text-[var(--light-text)] max-mobile:text-sm">I’m a self-motivated web developer based in
                         Uttar Pradesh, India. I loves transforming designs into clean, functional, and engaging web
                         experiences. I am passionate about building responsive, and user-friendly websites.</p>
-                    <a href="about.html" class="btn">Read More&gt;</a>
+                        <p class="about-para text-lg text-[var(--light-text)]">I turn designs into dynamic, high-performance websites that engage and inspire.I enjoy solving problems, optimizing performance, and creating intuitive user interfaces. My goal is to leverage my skills for freelancing and professional opportunities, crafting impactful digital solutions."</p>
                 </div>
-                <div class="right w-1/2 flex justify-center items-center max-mobile:w-full">
+                <div class="about-right w-1/2 flex justify-center items-center max-mobile:w-full overflow-hidden">
                     <img src="assets/images/about-img.png" alt="about-img" class="w-3/4 h-auto">
                 </div>
             </div>
@@ -101,7 +92,7 @@
         <!-- -------- About starts here ------  -->
 
         <!-- -------- Skills starts here ------  -->
-        <section class="skill-container mt-16">
+        <section class="skill-container mt-16 overflow-hidden">
             <div class="section-head flex items-center">
                 <span class="highlight-text text-xl font-bold">#</span>
                 <h1 class="text-xl font-semibold">skills</h1>
@@ -115,7 +106,7 @@
                     <!-- skill-column  -->
                     <div class="skill-column w-1/3 max-mobile:w-full">
                         <!-- skills  -->
-                        <div class="language border-[1px] border-[var(--light-text)]">
+                        <div class="language border-[1px] border-[var(--light-text)] overflow-hidden">
                             <h1
                                 class="skill-title border-b-[1px] border-[var(--light-text)] px-4 py-2 text-sm text-white font-semibold">
                                 Language</h1>
@@ -129,7 +120,7 @@
                     <!-- skill-column  -->
                     <div class="skill-column w-1/3 flex flex-col gap-4 max-mobile:w-full">
                         <!-- skills  -->
-                        <div class="database border-[1px] border-[var(--light-text)]">
+                        <div class="database border-[1px] border-[var(--light-text)] overflow-hidden">
                             <h1
                                 class="skill-title border-b-[1px] border-[var(--light-text)] px-4 py-2 text-sm text-white font-semibold">
                                 Database</h1>
@@ -139,7 +130,7 @@
                         </div>
                         <!-- skills  -->
                         <!-- skills  -->
-                        <div class="other border-[1px] border-[var(--light-text)]">
+                        <div class="other border-[1px] border-[var(--light-text)] overflow-hidden">
                             <h1
                                 class="skill-title border-b-[1px] border-[var(--light-text)] px-4 py-2 text-sm text-white font-semibold">
                                 Others</h1>
@@ -155,7 +146,7 @@
                     <!-- skill-column  -->
                     <div class="skill-column w-1/3 flex flex-col gap-4 max-mobile:w-full">
                         <!-- skills  -->
-                        <div class="tools border-[1px] border-[var(--light-text)]">
+                        <div class="tools border-[1px] border-[var(--light-text)] overflow-hidden">
                             <h1
                                 class="skill-title border-b-[1px] border-[var(--light-text)] px-4 py-2 text-sm text-white font-semibold">
                                 Tools</h1>
@@ -168,7 +159,7 @@
                         </div>
                         <!-- skills  -->
                         <!-- skills  -->
-                        <div class="framworks border-[1px] border-[var(--light-text)]">
+                        <div class="framworks border-[1px] border-[var(--light-text)] overflow-hidden">
                             <h1
                                 class="skill-title border-b-[1px] border-[var(--light-text)] px-4 py-2 text-sm text-white font-semibold">
                                 Frameworks</h1>
@@ -215,7 +206,15 @@
     </footer>
     <!-- --------- Footer starts here --------------- -->
 
+
+     <!-- cursor  -->
+     <div class="cursor fixed bg-[#ffffff82] text-black px-4 py-2 rounded-full">
+         dotHp
+        </div>
+        <!-- cursor  -->
+
     <!-- --------- scripts--------------- -->
+     <script src="js/animations/about.js"></script>
      <script src="js/script.js"></script>
     <!-- --------- scripts--------------- -->
 </body>

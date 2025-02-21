@@ -18,7 +18,7 @@
 
 <body class=" w-full bg-[var(--bg-color)] text-white font-[main] overflow-x-hidden">
     <!-- ------------- link-elements starts here----------- -->
-    <div class="elements absolute top-0 left-4 max-mobile:left-0">
+    <div class="link-element absolute top-0 left-4 max-mobile:left-0">
         <div class="flex flex-col gap-2 items-center">
             <svg viewBox="0 0 16 250" class="h-[250px]">
                 <path style="stroke: white; stroke-width: 2; fill: none; stroke-dasharray: 250;" d="M8 0 V2500"
@@ -36,7 +36,7 @@
 
 
         <!-- -------- Navbar starts here ------  -->
-        <nav class="flex justify-between items-center">
+        <nav class="flex justify-between items-center relative">
             <div class="logo">
                 <p class="text-base font-extrabold ">DotHP</p>
             </div>
@@ -44,25 +44,25 @@
                 <img src="assets/images/menu-icon.png" alt="menu-icon" class="h-full w-full transition-transform absolute top-0 left-0  max-mobile:scale-100">
                 <img src="assets/images/cross-icon.svg" alt="menu-icon" class="h-full w-full transition-transform absolute top-0 left-0  max-mobile:scale-0">
             </div>
-            <ul class="menu flex gap-6 transition-all items-center max-mobile:flex max-mobile:bg-[var(--bg-color)] max-mobile:p-10 max-mobile:absolute max-mobile:flex-col max-mobile:items-start max-mobile:w-[60vw] max-mobile:h-[80vh] max-mobile:top-[10vh] max-mobile:right-[-60vw] max-mobile:border-2 max-mobile:border-white">
+            <ul class="menu flex gap-6 z-50 transition-all max-mobile:z-50 items-center max-mobile:flex max-mobile:bg-[var(--bg-color)] max-mobile:p-10 max-mobile:absolute max-mobile:flex-col max-mobile:items-start max-mobile:w-[60vw] max-mobile:h-[80vh] max-mobile:top-[10vh] max-mobile:right-[-60vw] max-mobile:border-2 max-mobile:border-white">
                 <li class="menu-links ">
                     <a href="index.html"
-                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
+                        class="no-underline  inline-block  text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>home</a>
                 </li>
                 <li class="menu-links ">
                     <a href="projects.html"
-                        class="no-underline text-white text-base hover:text-[white] transition-colors"><span
+                        class="no-underline inline-block   text-white text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>works</a>
                 </li>
                 <li class="menu-links ">
                     <a href="about.html"
-                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
+                        class="no-underline  inline-block  text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>about-me</a>
                 </li>
                 <li class="menu-links ">
                     <a href="contact.html"
-                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
+                        class="no-underline  inline-block  text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
                             class="highlight-text">#</span>contact</a>
                 </li>
             </ul>
@@ -509,7 +509,14 @@
     </footer>
     <!-- --------- Footer starts here --------------- -->
 
+      <!-- cursor -->
+      <div class="cursor fixed bg-[#ffffff82] text-black px-4 py-2 rounded-full">
+        dotHp
+    </div>
+    <!-- cursor -->
+
     <!-- ------------- scripts -------------------- -->
+     <script src="js/animations/projects.js"></script>
      <script src="js/script.js"></script>
     <!-- ------------- scripts -------------------- -->
 </body>
