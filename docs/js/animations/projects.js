@@ -6,7 +6,6 @@ gsap.from(elementLine, {
     height: 0,
     duration: 1,
 })
-s
 gsap.from(elementLinks, {
     opacity: 0,
     y: 100,
