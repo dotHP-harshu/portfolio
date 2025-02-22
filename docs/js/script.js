@@ -1,35 +1,5 @@
 
-// Showing menu
-const menuIcon = document.querySelectorAll('.menu-icon>img')[0];
-const crossIcon = document.querySelectorAll('.menu-icon>img')[1];
-const menu = document.querySelector('.menu');
-let isShowingmenu = true;
-const showingmenu = ()=>{
-    if(isShowingmenu) {
-        crossIcon.classList.add('max-mobile:scale-100');
-        crossIcon.classList.remove('max-mobile:scale-0');
-        menuIcon.classList.add('max-mobile:scale-0');
-        menuIcon.classList.remove('max-mobile:scale-100');
-        menu.classList.remove('max-mobile:right-[-60vw]');
-        menu.classList.add('max-mobile:right-0');
-        isShowingmenu = false;
-    }else{
-        crossIcon.classList.add('max-mobile:scale-0');
-        crossIcon.classList.remove('max-mobile:scale-100');
-        menuIcon.classList.add('max-mobile:scale-100');
-        menuIcon.classList.remove('max-mobile:scale-0');
-        menu.classList.add('max-mobile:right-[-60vw]');
-        menu.classList.remove('max-mobile:right-0');
-        isShowingmenu = true;
-    }
-}
-menuIcon.addEventListener('click', showingmenu);
-crossIcon.addEventListener('click', showingmenu);
-
-
-
 // common animations 
-const menuLinks = document.querySelectorAll('.menu-links');
 const btns = document.querySelectorAll('.btn');
 
 // button animation 
@@ -60,17 +30,15 @@ document.addEventListener('mousemove', (e) => {
     })
 })
 
-menuLinks.forEach((link) => {
-    link.addEventListener("mouseenter", () => {
-        cursor.classList.add("opacity-50");
-        cursor.textContent = "menu"
-        let element = link.querySelector('a');
-        gsap.timeline()
-            .to(element, { y: 20, opacity: 0, duration: 0.2 })
-            .to(element, { y: 0, opacity: 1, duration: 0.2 })
-    })
-    link.addEventListener("mouseleave", () => {
-        cursor.classList.remove("opacity-50");
-        cursor.textContent = "dotHP"
+
+
+const preloader = document.getElementById('preloader');
+
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.to(preloader, {
+        zIndex: -1,
+        opacity: 0,
+        duration: 1,
+        x: "100%"
     })
 })

@@ -2,18 +2,74 @@ const elementLine = document.querySelector('.link-element div svg');
 const elementLinks = document.querySelectorAll('.link-element div a');
 const navbar = document.querySelector('nav');
 const quotePara = document.querySelector('.quote>p')
-const quoteAuthor = document.querySelector('.quote-author>p')
+const quoteAuthor = document.querySelector('.quote-author>p');
+const sectionHeads = document.querySelectorAll('.section-head')
+const menuLinks = document.querySelectorAll('.menu-links');
 
 
 
 
 
 
+// Showing menu --------------------------------------------------------------------------------------------------------
+const menuIcon = document.querySelectorAll('.menu-icon>img')[0];
+const crossIcon = document.querySelectorAll('.menu-icon>img')[1];
+const menu = document.querySelector('.menu');
+let isShowingmenu = true;
+const showingmenu = () => {
+    if (isShowingmenu) {
+        crossIcon.classList.add('max-mobile:scale-100');
+        crossIcon.classList.remove('max-mobile:scale-0');
+        menuIcon.classList.add('max-mobile:scale-0');
+        menuIcon.classList.remove('max-mobile:scale-100');
+        menu.classList.remove('max-mobile:right-[-60vw]');
+        menu.classList.add('max-mobile:right-0');
+        isShowingmenu = false;
+    } else {
+        crossIcon.classList.add('max-mobile:scale-0');
+        crossIcon.classList.remove('max-mobile:scale-100');
+        menuIcon.classList.add('max-mobile:scale-100');
+        menuIcon.classList.remove('max-mobile:scale-0');
+        menu.classList.add('max-mobile:right-[-60vw]');
+        menu.classList.remove('max-mobile:right-0');
+        isShowingmenu = true;
+    }
+}
+menuIcon.addEventListener('click', showingmenu);
+crossIcon.addEventListener('click', showingmenu);
+
+// menulink animation --------------------------------------------------------------------------------------------------------
+menuLinks.forEach((link) => {
+    link.addEventListener("mouseenter", () => {
+        cursor.classList.add("opacity-50");
+        cursor.textContent = "menu"
+        let element = link.querySelector('a');
+        gsap.timeline()
+            .to(element, { y: 20, opacity: 0, duration: 0.2 })
+            .to(element, { y: 0, opacity: 1, duration: 0.2 })
+    })
+    link.addEventListener("mouseleave", () => {
+        cursor.classList.remove("opacity-50");
+        cursor.textContent = "dotHP"
+    })
+})
 
 
+// section head animation --------------------------------------------------------------------------------------------------------
+sectionHeads.forEach((sectionHead) => {
+    gsap.from(sectionHead, {
+        opacity: 0,
+        x: "-100%",
+        duration: 1,
+        scrollTrigger: {
+            trigger: sectionHead,
+            start: "50% 100%",
+            toggleActions: "play reverse play reverse"
+        }
+    })
+})
 
-
-// hero animation 
+// hero animation --------------------------------------------------------------------------------------------------------
 function playHeroAnimation() {
     let tl = gsap.timeline();
     // link element animation
@@ -37,7 +93,7 @@ function playHeroAnimation() {
             rotate: 180,
             duration: 1,
         })
-       
+
         .from(".hero-left h1", {
             stagger: 0.5,
             opacity: 0,
@@ -64,11 +120,7 @@ ScrollTrigger.create({
     onEnterBack: () => playHeroAnimation().restart(), // Play when scrolling back up
 });
 
-
-
-// Quote section animation 
-
-
+// Quote section animation --------------------------------------------------------------------------------------------------------
 gsap.from(quotePara, {
     y: 40,
     opacity: 0,
@@ -91,10 +143,7 @@ gsap.from(quoteAuthor, {
 })
 
 
-// Project card animation 
-
-
-// Observe when the container hits the trigger point
+// Project card animation --------------------------------------------------------------------------------------------------------
 gsap.from(".projects", {
     opacity: 0,
     duration: 0.5,
@@ -105,22 +154,24 @@ gsap.from(".projects", {
     }
 });
 
-// Animate cards one by one when container is visible
-gsap.from(".project", {
-    y: 200, // Move to normal position
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out",
-    stagger: 0.3, // Delay between cards
-    scrollTrigger: {
-        trigger: ".project",
-        start: "top 70%",
-        toggleActions: "play reverse play reverse",
-    }
-});
+const projects = document.querySelectorAll('.project');
+projects.forEach((project) => {
+
+    gsap.from(project, {
+        y: 200, // Move to normal position
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: project,
+            start: "top 70%",
+            toggleActions: "play reverse play reverse",
+        }
+    });
+})
 
 
-// skill animation 
+// skill animation --------------------------------------------------------------------------------------------------------
 gsap.from(".skill-title", {
     y: -200,
     opacity: 0,
@@ -161,8 +212,7 @@ gsap.from(".skill-left>img", {
     }
 })
 
-// about animation
-
+// about animation--------------------------------------------------------------------------------------------------------
 gsap.from('.about-left>p', {
     text: "",
     opacity: 0,

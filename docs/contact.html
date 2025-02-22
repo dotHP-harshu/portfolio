@@ -9,19 +9,28 @@
     <link rel="stylesheet" href="css/output.css">
     <link rel="stylesheet" href="css/style.css">
 
-     <!-- ---------gsap-------- -->
-     <script src="gsap/gsap.min.js"></script>
-     <script src="gsap/ScrollTrigger.min.js"></script>
-     <script src="gsap/TextPlugin.min.js"></script>
+    <!-- ---------gsap-------- -->
+    <script src="gsap/gsap.min.js"></script>
+    <script src="gsap/ScrollTrigger.min.js"></script>
+    <script src="gsap/TextPlugin.min.js"></script>
     <!-- ---------gsap-------- -->
 </head>
 
 <body class="w-full bg-[var(--bg-color)] text-white font-[main] overflow-x-hidden">
+
+    <!-- ------------ preloader starts here ----------------  -->
+    <div id="preloader"
+        class="preloader w-[100vw] h-[100vh] fixed top-0 left-0 bg-black z-[99] flex justify-center items-center">
+        <h1 class="text-white text-base max-mobile:text-sm">We are loading....</h1>
+    </div>
+    <!-- ------------ preloader starts here ----------------  -->
+
     <!-- ------------- link-elements starts here----------- -->
-    <div class="elements absolute top-0 left-4 max-mobile:left-0">
+    <div class="link-element absolute top-0 left-4 max-mobile:left-0">
         <div class="flex flex-col gap-2 items-center">
             <svg viewBox="0 0 16 250" class="h-[250px]">
-                <path style="stroke: white; stroke-width: 2; fill: none; stroke-dasharray: 250;" d="M8 0 V2500" stroke-linecap="round" />
+                <path style="stroke: white; stroke-width: 2; fill: none; stroke-dasharray: 250;" d="M8 0 V2500"
+                    stroke-linecap="round" />
             </svg>
             <a href="#"><img src="assets/images/github-icon.svg" alt="github" class="w-10 h-10"></a>
             <a href="#"><img src="assets/images/instagram-icon.svg" alt="github" class="w-12 h-12 rounded-full"></a>
@@ -32,67 +41,32 @@
     <!-- --------- Main starts here --------------- -->
     <main class="block w-[80%] mx-auto py-6 relative overflow-x-hidden">
 
-
-
-        <!-- -------- Navbar starts here ------  -->
-        <nav class="flex justify-between items-center">
-            <div class="logo">
-                <p class="text-base font-extrabold ">DotHP</p>
-            </div>
-            <div class="menu-icon w-6 h-6 overflow-hidden relative max-mobile:inline-block hidden">
-                <img src="assets/images/menu-icon.png" alt="menu-icon" class="h-full w-full transition-transform absolute top-0 left-0  max-mobile:scale-100">
-                <img src="assets/images/cross-icon.svg" alt="menu-icon" class="h-full w-full transition-transform absolute top-0 left-0  max-mobile:scale-0">
-            </div>
-            <ul class="menu flex gap-6 transition-all items-center max-mobile:flex max-mobile:bg-[var(--bg-color)] max-mobile:z-50 max-mobile:p-10 max-mobile:absolute max-mobile:flex-col max-mobile:items-start max-mobile:w-[60vw] max-mobile:h-[80vh] max-mobile:top-[10vh] max-mobile:right-[-60vw] max-mobile:border-2 max-mobile:border-white">
-
-                <li class="menu-links ">
-                    <a href="index.html"
-                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
-                            class="highlight-text">#</span>home</a>
-                </li>
-                <li class="menu-links ">
-                    <a href="projects.html"
-                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
-                            class="highlight-text">#</span>works</a>
-                </li>
-                <li class="menu-links ">
-                    <a href="about.html"
-                        class="no-underline text-[var(--light-text)] text-base hover:text-[white] transition-colors"><span
-                            class="highlight-text">#</span>about-me</a>
-                </li>
-                <li class="menu-links ">
-                    <a href="contact.html"
-                        class="no-underline text-white text-base hover:text-[white] transition-colors"><span
-                            class="highlight-text">#</span>contact</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- -------- Navbar starts here ------  -->
-
         <!-- -------- path section start here ------------- -->
-         <section class="path mt-10">
-            <p class="text-5xl max-mobile:text-3xl"><span class="highlight-text">/</span>contact</p>
-         </section>
+        <section class="path mt-4">
+            <a href="index.html" class=" inline-block text-5xl max-mobile:text-3xl"><span
+                    class="highlight-text">/</span>home</a>
+            <p class="text-sm text-[var(--light-text)] mt-10">How to contact me?</p>
+        </section>
         <!-- -------- path section endt here ------------- -->
 
         <!-- -------- Contact starts here ------  -->
-        <section class="contact-container mt-16 relative">
-             <!-- rectangle element  -->
-             <div class="rect-elements absolute top-0 left-full">
+        <section class="contact-container mt-10 relative max-mobile:px-4">
+            <!-- rectangle element  -->
+            <div class="rect-elements absolute top-0 left-full">
                 <div class="flex flex-col gap-2 items-center">
                     <svg viewBox="0 0 300 200" class=" h-52 w-72">
-                        <path style="stroke: white; stroke-width: 1; fill: none; stroke-dasharray: 600;" d="M50 150 V50 H250 V150 H50" stroke-linecap="round" />
+                        <path style="stroke: white; stroke-width: 1; fill: none; stroke-dasharray: 600;"
+                            d="M50 150 V50 H250 V150 H50" stroke-linecap="round" />
                     </svg>
                 </div>
             </div>
             <!-- rectangle element  -->
-            <div class="section-head flex items-center ">
-                <h1 class="text-sm text-[var(--light-text)]">who am i?</h1>
-            </div>
             <div class="contact flex items-center min-h-[70vh] max-mobile:flex-col max-mobile:gap-10 max-mobile:h-auto">
                 <div class="contact-left w-1/2 flex flex-col justify-center items-start max-mobile:w-full">
-                    <p class="contact-para text-sm text-[var(--light-text)]">Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Ratione accusamus consectetur magni minima? Ab, quaerat.</p>
+                    <p class="contact-para text-sm text-[var(--light-text)]">Have a project idea or need a developer to
+                        bring your vision to life? Let’s connect! I’m open to freelancing, collaborations, and exciting
+                        opportunities. Feel free to reach out via email or connect with me on social media. <br> Let’s
+                        build something amazing together!</p>
                 </div>
                 <div class="contact-right w-1/2 flex flex-col justify-center items-center max-mobile:w-full">
                     <div class="contact-detail min-w-60 border-[1px] border-[var(--light-text)] px-4 py-2">
@@ -136,13 +110,21 @@
             </div>
         </div>
         <div class="copyright w-full py-4">
-            <p class=" w-fit mx-auto text-sm text-[var(--light-text)] text-center">&copy; 2025 | Developed by Harsh Prajapati</p>
+            <p class=" w-fit mx-auto text-sm text-[var(--light-text)] text-center">&copy; 2025 | Developed by Harsh
+                Prajapati</p>
         </div>
     </footer>
     <!-- --------- Footer starts here --------------- -->
 
+    <!-- cursor -->
+    <div class="cursor fixed bg-[#ffffff82] text-black px-4 py-2 rounded-full max-mobile:hidden">
+        dotHp
+    </div>
+    <!-- cursor -->
+
     <!-- --------- scripts --------------- -->
-     <script src="js/script.js"></script>
+    <script src="js/animations/contact.js"></script>
+    <script src="js/script.js"></script>
     <!-- --------- scripts --------------- -->
 </body>
 

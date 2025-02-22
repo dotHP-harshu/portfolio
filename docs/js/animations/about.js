@@ -1,6 +1,5 @@
 const elementLine = document.querySelector('.link-element div svg');
 const elementLinks = document.querySelectorAll('.link-element div a');
-const navbar = document.querySelector('nav');
 
 
 gsap.from(elementLine, {
@@ -14,11 +13,6 @@ gsap.from(elementLinks, {
     duration: 2,
     stagger: 1
 })
-gsap.from(navbar, {
-    y: -520,
-    duration: 1,
-    stagger: true
-})
 
 
 // skill animation 
@@ -29,10 +23,7 @@ gsap.from(".skill-title", {
     stagger: 0.1,
     scrollTrigger: {
         trigger: ".skill-title",
-        start: "top 70%",
-        end: "top -10%",
-        toggleActions: "play reverse play reverse",
-
+        start: "0% 70%",
     }
 })
 
@@ -43,7 +34,8 @@ gsap.from('.skill-names>span', {
     stagger: 0.2,
     scrollTrigger: {
         trigger: '.skill-names>span',
-        start: "top 70%",
+        start: "top 80%",
+        end: "bottom -50%",
         toggleActions: "play reverse play reverse"
     }
 })
