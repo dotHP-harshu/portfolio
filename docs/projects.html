@@ -50,6 +50,53 @@
         </section>
         <!-- -------- path section endt here ------------- -->
 
+        <!-- -------- Navbar starts here ------  -->
+        <nav class="flex justify-between items-center relative">
+            <div class="logo">
+                <p class="text-base font-extrabold ">DotHP</p>
+            </div>
+            <div class="menu-icon w-10 h-10 cursor-pointer max-mobile:w-6 max-mobile:h-6 ">
+                <img src="assets/images/menu-icon.png" alt="menu-icon" class="h-auto w-full">
+            </div>
+        </nav>
+        <!-- -------- Navbar ends here ------  -->
+
+        <!-- ----------- Menu starts here ----------------  -->
+        <div id="menu" class=" fixed z-40 top-0 left-0 bg-black w-full h-[100vh] translate-y-[-100%]">
+            <div
+                class="cross-icon w-10 h-10 overflow-hidden cursor-pointer absolute bottom-4 left-[50%] translate-x-[-50%] max-mobile:w-6 max-mobile:h-6 ">
+                <img src="assets/images/cross-icon.svg" alt="cross-icon" class="w-full h-auto  ">
+            </div>
+            <div class="menu-container w-full h-full flex ">
+                <div
+                    class="menu-left w-1/2 h-full p-6 flex justify-center items-center max-mobile:h-auto max-mobile:pt-6 max-mobile:absolute max-mobile:top-0 max-mobile:left-[50%] max-mobile:translate-x-[-50%]">
+                    <img src="assets/images/white-sign.svg" alt="white-sign" class="w-full max-mobile:w-40 h-auto">
+                </div>
+                <div class="menu-right w-1/2 h-full flex justify-center items-center max-mobile:w-full">
+                    <ul class="h-full w-full flex flex-col gap-12 justify-center items-center">
+                        <li class="menu-links overflow-hidden">
+                            <a href="index.html" class="no-underline inline-block text-7xl max-mobile:text-4xl "><span
+                                    class="highlight-text">#</span>home</a>
+                        </li>
+                        <li class="menu-links overflow-hidden">
+                            <a href="projects.html"
+                                class="no-underline inline-block text-7xl max-mobile:text-4xl "><span
+                                    class="highlight-text">#</span>works</a>
+                        </li>
+                        <li class="menu-links overflow-hidden">
+                            <a href="about.html" class="no-underline inline-block text-7xl max-mobile:text-4xl "><span
+                                    class="highlight-text">#</span>about-me</a>
+                        </li>
+                        <li class="menu-links overflow-hidden ">
+                            <a href="contact.html" class="no-underline inline-block text-7xl max-mobile:text-4xl "><span
+                                    class="highlight-text">#</span>contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- ----------- Menu ends here ----------------  -->
+
         <!-- -------- Projects starts here ------  -->
         <section class="project-container py-10 mt-10 max-mobile:px-4">
             <!-- ----------- Project section starts here------------- -->
@@ -491,7 +538,7 @@
     <!-- --------- Footer starts here --------------- -->
 
     <!-- cursor -->
-    <div class="cursor fixed bg-[#ffffff82] text-black px-4 py-2 rounded-full max-mobile:hidden">
+    <div class="cursor fixed z-50 bg-[#ffffff82] text-black px-4 py-2 rounded-full max-mobile:hidden">
         dotHp
     </div>
     <!-- cursor -->
