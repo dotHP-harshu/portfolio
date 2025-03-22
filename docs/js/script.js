@@ -2,6 +2,8 @@
 // common animations 
 const btns = document.querySelectorAll('.btn');
 const menuLinks = document.querySelectorAll('.menu-links'); // for menu animation 
+const menuImage = document.querySelector('.menu-left img'); // for menuImage animation 
+
 
 
 // button animation 
@@ -49,72 +51,114 @@ document.addEventListener('DOMContentLoaded', () => {
 const menuIcon = document.querySelector('.menu-icon');
 const crossIcon = document.querySelector('.cross-icon');
 const menu = document.querySelector('#menu');
-let isShowingmenu = true;
-const showingmenu = () => {
-    const menuImage = document.querySelector('.menu-left img');
-    if (isShowingmenu) {
-        isShowingmenu = false;
+let isShowingMenu;
 
+if (menu.classList.contains("showing")) {
+    isShowingMenu = true
+} else {
+    isShowingMenu = false
+}
+const showingMenu = () => {
+    if (!isShowingMenu) {
         let tl = gsap.timeline();
-
         tl
             .to(menuIcon, {
                 scale: 2,
                 opacity: 0,
-                duration: 0.5
+                duration: 0.125,
             })
             .to(menu, {
                 y: "0%",
-                duration: 1
+                duration: 0.25,
+                ease: "power2.out"
             })
             .from(crossIcon, {
                 opacity: 0,
                 rotate: 360,
-                duration: 0.5
+                duration: 0.25,
+                ease: "power2.in"
             })
             .from(menuImage, {
                 opacity: 0,
                 x: "-100%",
-                duration: 0.5
+                duration: 0.25,
             })
             .from(".menu-links a", {
                 y: "100%",
-                duration: 1
+                duration: 0.25,
+                ease: "power1.out"
             })
 
+        isShowingMenu = true;
+        menu.classList.toggle("showing");
     } else {
-        isShowingmenu = true;
-
         let tl = gsap.timeline();
 
         tl
             .to(menu, {
                 y: "-100%",
-                duration: 1
+                duration: 0.25,
             })
             .to(menuIcon, {
                 scale: 1,
                 opacity: 1,
-                duration: 0.5
+                duration: 0.25,
             })
 
+        isShowingMenu = false;
+        menu.classList.toggle("showing");
     }
+
+
 }
-menuIcon.addEventListener('click', showingmenu);
-crossIcon.addEventListener('click', showingmenu);
+
+
+menuIcon.addEventListener('click', showingMenu);
+crossIcon.addEventListener('click', showingMenu);
+
+// cursor animation on menu and cross icon from 110 to 133
+menuIcon.addEventListener("mouseenter", () => {
+    cursor.textContent = "menu";
+    gsap.to(cursor, {
+        scale: 0.8,
+    })
+})
+menuIcon.addEventListener("mouseleave", () => {
+    cursor.textContent = "dotHP";
+    gsap.to(cursor, {
+        scale: 1,
+    })
+})
+crossIcon.addEventListener("mouseenter", () => {
+    cursor.textContent = "close";
+    gsap.to(cursor, {
+        scale: 0.8,
+    })
+})
+crossIcon.addEventListener("mouseleave", () => {
+    cursor.textContent = "dotHP";
+    gsap.to(cursor, {
+        scale: 1,
+    })
+})
+// cursor animation on menu and cross icon from 110 to 133
+
 
 // menulink animation --------------------------------------------------------------------------------------------------------
 menuLinks.forEach((link) => {
     link.addEventListener("mouseenter", () => {
-        cursor.classList.add("opacity-50");
-        cursor.textContent = "menu"
-        let element = link.querySelector('a');
-        gsap.timeline()
-            .to(element, { y: 20, opacity: 0, duration: 0.2 })
-            .to(element, { y: 0, opacity: 1, duration: 0.2 })
+        cursor.textContent = "go to ";
+        gsap.to(cursor, {
+            scale: 0.8,
+        })
     })
     link.addEventListener("mouseleave", () => {
-        cursor.classList.remove("opacity-50");
-        cursor.textContent = "dotHP"
+        cursor.textContent = "dotHP";
+        gsap.to(cursor, {
+            scale: 1,
+        })
     })
 })
+
+
+

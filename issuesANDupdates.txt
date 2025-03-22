@@ -1,9 +1,9 @@
 1. fix the animation scroll trigger in skill section 
-2. add resume or cv to download or a link to drive
+2. add resume or cv to download or a link to drive ✅
 3. add links to the icons 
 4. add animation to the contact section
 5. add hover effects
 6. add navbar in the bottom having all pages links
-7. make the navigation bar sliding from upside 
+7. make the navigation bar sliding from upside ✅
 8. add a go to top button
 9. add a contact form
