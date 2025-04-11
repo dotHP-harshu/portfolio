@@ -138,9 +138,8 @@ gsap.from(".skill-title", {
     scrollTrigger: {
         trigger: ".skill-title",
         start: "top 70%",
-        end: "top -10%",
+        end: "top -50%",
         toggleActions: "play reverse play reverse",
-
     }
 })
 
@@ -152,7 +151,9 @@ gsap.from('.skill-names>span', {
     scrollTrigger: {
         trigger: '.skill-names>span',
         start: "top 70%",
-        toggleActions: "play reverse play reverse"
+        end: "top -50%",
+        toggleActions: "play reverse play reverse",
+        markers:true
     }
 })
 
@@ -185,10 +186,24 @@ gsap.from('.about-left>p', {
 
 gsap.from(".about-right>img", {
     y: 500,
-    duration: 2,
+    duration: 0.5,
     ease: "steps(12)",
     scrollTrigger: {
         trigger: ".about-right>img",
+        start: "top 90%",
+        toggleActions: 'play reverse play reverse'
+    }
+})
+
+
+// contact animation--------------------------------------------------------------------------------------------------------
+
+gsap.from(".contact-para", {
+    scale:0,
+    opacity:0,
+    duration:1,
+    scrollTrigger: {
+        trigger: ".contact-para",
         start: "top 90%",
         toggleActions: 'play reverse play reverse'
     }
