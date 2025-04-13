@@ -153,7 +153,6 @@ gsap.from('.skill-names>span', {
         start: "top 70%",
         end: "top -50%",
         toggleActions: "play reverse play reverse",
-        markers:true
     }
 })
 

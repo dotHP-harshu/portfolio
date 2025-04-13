@@ -751,6 +751,10 @@ video {
   height: 100%;
 }
 
+.h-\[100dvh\] {
+  height: 100dvh;
+}
+
 .min-h-80 {
   min-height: 20rem;
 }
@@ -1179,7 +1183,47 @@ video {
   .project-img {
     height: auto;
   }
+}
 
+.project-para {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--light-text);
+}
+
+.project-detail::-webkit-scrollbar {
+  width: 5px;
+}
+
+.project-detail::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project-detail::-webkit-scrollbar-thumb {
+  background-color: gray;
+  /* Tailwind blue-500 */
+}
+
+.project-detail::-webkit-scrollbar-corner {
+  display: none
+}
+
+.project-detail {
+  display: flex;
+  height: 9rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-color: var(--light-text);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media not all and (min-width: 425px) {
   .max-mobile\:absolute {
     position: absolute;
   }

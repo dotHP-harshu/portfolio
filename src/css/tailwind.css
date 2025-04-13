@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .project-detail-scrollbar::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .project-detail-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .project-detail-scrollbar::-webkit-scrollbar-thumb {
+        background-color: gray;
+        /* Tailwind blue-500 */
+    }
+
+    .project-detail-scrollbar::-webkit-scrollbar-corner {
+        display: none
+    }
+}
+
+
 .highlight-text {
     @apply text-[var(--main-color)] font-extrabold;
 }
@@ -16,4 +36,12 @@
 
 .project-img {
     @apply w-full overflow-hidden max-mobile:h-auto;
+}
+
+.project-para {
+    @apply text-sm text-[var(--light-text)];
+}
+
+.project-detail {
+    @apply flex flex-col gap-2 px-4 py-2 border-y-[1px] border-[var(--light-text)] h-36 overflow-y-auto project-detail-scrollbar;
 }
